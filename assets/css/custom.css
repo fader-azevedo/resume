@@ -54,7 +54,7 @@ section{
     z-index: 1;
 }
 .opa{
-    background: rgba(27, 27, 27, 0.9) !important;
+    /*background: rgba(27, 27, 27, 0.9) !important;*/
 }
 .bg-site{
     background: rgba(34, 88, 130, 0.9) !important;
