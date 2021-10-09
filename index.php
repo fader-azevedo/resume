@@ -46,7 +46,7 @@ require_once("./view/Language/lang." . $lang . ".php");
 </head>
 
 <body>
-<div class="div-media-icons">
+<div class="div-media-icons d-sm-none d-none d-lg-block">
     <ul class="media-icons">
         <li><a href="https://github.com/fader-azevedo" aria-label="GitHub" target="_blank" rel="noreferrer">
                 <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -98,10 +98,10 @@ require_once("./view/Language/lang." . $lang . ".php");
             </a></li>
     </ul>
 </div>
-<div class="div-vertical-email">
+<div class="div-vertical-email d-sm-none d-none d-lg-block">
     <a href="mailto:fadermacuvele383@gmail.com">fadermacuvele383@gmail.com</a>
 </div>
-<!-- ======= Header ======= -->
+
 <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex  align-items-center">
         <a href="" id="logo" class="me-auto position-relative" style="width: 50px; height: 50px">
@@ -116,7 +116,6 @@ require_once("./view/Language/lang." . $lang . ".php");
                 </g>
             </svg>
         </a>
-        <!--        </h1>-->
         <nav id="navbar" class="navbar order-last order-lg-0">
             <ul>
                 <li><a class="nav-link scrollto " href="#about"><?=$nav['about']?></a></li>
@@ -127,7 +126,7 @@ require_once("./view/Language/lang." . $lang . ".php");
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>
         <a href="#contact" class="get-started-btn scrollto"><?=$nav['resume']?></a>
-        <div class="d-flex ps-3">
+        <div class="d-flex ps-0 ps-sm-0 ps-lg-3 pe-lg-0 pe-3">
             <a class="language <?=$lang == 'pt'?'active':''?>" href="index.php?lang=pt">PT</a>
             <span class="mx-1">|</span><a class="language <?=$lang == 'en'?'active':''?>" href="index.php?lang=en">EN</a>
         </div>
@@ -139,11 +138,16 @@ require_once("./view/Language/lang." . $lang . ".php");
         <div class="dot">
             <div class="main-container w-100 h-100 pt-5 pt-lg-5 bg-dangers">
                 <div class="container h-100 mt-5 d-flex flex-column justify-content-between">
-                    <div class="row align-items-center" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="col-xl-4 col-lg-5 col-md-5 col-sm-4">
-                            <div class="bg-transparent rounded-circle row mx-sm-auto mx-auto mx-lg-0 align-items-center"
-                                 style="width: 230px; height: 230px; border: 2px solid white">
-                                <img src="assets/img/fader-face.jpg" class="rounded-circle mx-autox d-blockx" alt="">
+                    <div class="row d-flex justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-start" data-aos="zoom-in" data-aos-delay="100">
+<!--                        <div class="col-xl-4 col-lg-5 col-md-5 col-sm-4">-->
+                        <div class="col-xl-4 col-lg-5 col-md-5 col-sm-4 col-12">
+<!--                            <div class="bg-transparent rounded-circle row mx-sm-auto mx-auto mx-lg-0 align-items-center"-->
+<!--                                 style="width: 230px; height: 230px; border: 2px solid white">-->
+<!--                                <img src="assets/img/fader-face.jpg" class="rounded-circle mx-autox d-blockx" alt="">-->
+<!--                            </div>-->
+
+                            <div class="rounded position-relative image-box mt-5 mx-auto d-block mx-lg-0">
+                                <img src="assets/img/fader-face.jpg" class="rounded position-absolute w-100" alt="">
                             </div>
                         </div>
                     </div>
@@ -169,7 +173,6 @@ require_once("./view/Language/lang." . $lang . ".php");
 
 </section><!-- End Hero -->
 
-
 <main id="main">
     <section id="about" class="about bg-main">
         <div class="container" data-aos="fade-up">
@@ -192,9 +195,9 @@ require_once("./view/Language/lang." . $lang . ".php");
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 d-flex justify-content-end">
+                <div class="col-md-4 d-sm-none d-none d-lg-flex justify-content-lg-end">
                     <div class="rounded position-relative image-box">
-                        <img src="assets/img/fader-face.jpg" class="rounded-start position-absolute w-100" alt="">
+                        <img src="assets/img/fader-face.jpg" class="rounded position-absolute w-100" alt="">
                     </div>
                 </div>
             </div>

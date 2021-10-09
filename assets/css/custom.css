@@ -81,6 +81,7 @@ body{
 .dot {
     background: url("../img/dot.png");
 }
+
 .banner-effect {
     position: relative;
     background: linear-gradient(to right, #0071bc, #0071bc55, #952a7c55, #952a7c);
@@ -116,16 +117,16 @@ body{
     margin-left: -10px;
     color: transparent;
     -webkit-text-stroke: 1px #fff;
-    background: url("../../images/back.png");
+    background: url("../img/back.png");
     -webkit-background-clip: text;
-    background-position: 0 0;
+    background-position: -8px -40px;
     animation: back 20s linear infinite;
     font-family: "SF Mono Bold", sans-serif;
 }
 
 @keyframes back {
     100% {
-        background-position: 2000px 0;
+        /*background-position: 2000px 0;*/
     }
 }
 

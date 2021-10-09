@@ -426,6 +426,18 @@ h1, h2, h3, h4, h5, h6 {
     border-color: #fff;
 }
 
+
+#hero .image-box {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #64ffda
+}
+
+#hero .image-box img {
+    top: -15px;
+    right: -8%
+}
+
 @media (max-width: 768px) {
     #hero {
         text-align: center;
