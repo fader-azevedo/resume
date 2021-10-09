@@ -45,8 +45,8 @@ require_once("./view/Language/lang." . $lang . ".php");
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/custom.css" rel="stylesheet">
 </head>
-
 <body>
+
 <div class="div-media-icons d-sm-none d-none d-lg-block">
     <ul class="media-icons">
         <li><a href="<?=$link['github']?>" aria-label="GitHub" target="_blank" rel="noreferrer">
@@ -158,7 +158,7 @@ require_once("./view/Language/lang." . $lang . ".php");
                     </div>
                     <div class="row pt-5">
                         <div class="col-md-8">
-                            <p class="text-start text-active h6 mb-3"><?= $main['hi'] ?></p>
+                            <p class="text-start text-active h6 mb-3 mb-lg-4"><?= $main['hi'] ?></p>
                             <p class="text-start text-name">Fáder</p>
                             <p class="text-start text-white-50 h3"><?= $main['occupation'] ?></p>
                         </div>
