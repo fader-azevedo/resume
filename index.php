@@ -1,7 +1,7 @@
 <?php
 namespace Phppot;
 
-require_once("./Model/Core.php");
+require_once("./model/Core.php");
 
 use Phppot\DataSource;
 
