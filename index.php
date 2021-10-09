@@ -11,6 +11,7 @@ $nav = $core_model->get_by_lang('nav', $lang);
 $main = $core_model->get_by_lang('main', $lang);
 $about = $core_model->get_by_lang('about', $lang);
 $job = $core_model->get_by_lang('job', $lang);
+$link = $core_model->get_all('link',null);
 
 require_once("./view/Language/lang." . $lang . ".php");
 ?>
@@ -48,7 +49,7 @@ require_once("./view/Language/lang." . $lang . ".php");
 <body>
 <div class="div-media-icons d-sm-none d-none d-lg-block">
     <ul class="media-icons">
-        <li><a href="https://github.com/fader-azevedo" aria-label="GitHub" target="_blank" rel="noreferrer">
+        <li><a href="<?=$link['github']?>" aria-label="GitHub" target="_blank" rel="noreferrer">
                 <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">
                     <title>
@@ -56,7 +57,7 @@ require_once("./view/Language/lang." . $lang . ".php");
                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                 </svg>
             </a></li>
-        <li><a href="https://www.instagram.com/fader_azevedo" aria-label="Instagram" target="_blank" rel="noreferrer">
+        <li><a href="<?=$link['instagram']?>" aria-label="Instagram" target="_blank" rel="noreferrer">
                 <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram">
                     <title>
@@ -66,7 +67,7 @@ require_once("./view/Language/lang." . $lang . ".php");
                     <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                 </svg>
             </a></li>
-        <li><a href="https://twitter.com/fader_azevedo" aria-label="Twitter" target="_blank" rel="noreferrer">
+        <li class="d-none"><a href="https://twitter.com/FaderAzevedo1" aria-label="Twitter" target="_blank" rel="noreferrer">
                 <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter">
                     <title>
@@ -74,7 +75,8 @@ require_once("./view/Language/lang." . $lang . ".php");
                     <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
                 </svg>
             </a></li>
-        <li><a href="https://www.linkedin.com/in/fader-macuvele/" aria-label="Linkedin" target="_blank" rel="noreferrer">
+        <li><a href="<?=$link['linkedin']?>" aria-label="Linkedin" target="_blank"
+               rel="noreferrer">
                 <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin">
                     <title>
@@ -84,7 +86,7 @@ require_once("./view/Language/lang." . $lang . ".php");
                     <circle cx="4" cy="4" r="2"></circle>
                 </svg>
             </a></li>
-        <li><a href="https://codepen.io/fader_azevedo" aria-label="Codepen" target="_blank" rel="noreferrer">
+        <li><a href="<?=$link['codepen']?>" aria-label="Codepen" target="_blank" rel="noreferrer">
                 <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-codepen">
                     <title>
@@ -95,7 +97,8 @@ require_once("./view/Language/lang." . $lang . ".php");
                     <polyline points="2 15.5 12 8.5 22 15.5"></polyline>
                     <line x1="12" y1="2" x2="12" y2="8.5"></line>
                 </svg>
-            </a></li>
+            </a>
+        </li>
     </ul>
 </div>
 <div class="div-vertical-email d-sm-none d-none d-lg-block">
@@ -118,17 +121,18 @@ require_once("./view/Language/lang." . $lang . ".php");
         </a>
         <nav id="navbar" class="navbar order-last order-lg-0">
             <ul>
-                <li><a class="nav-link scrollto " href="#about"><?=$nav['about']?></a></li>
-                <li><a class="nav-link scrollto " href="#jobs"><?=$nav['job']?></a></li>
-                <li><a class="nav-link scrollto " href="#portfolio"><?=$nav['portfolio']?></a></li>
-                <li><a class="nav-link scrollto " href="#contact"><?=$nav['contact']?></a></li>
+                <li><a class="nav-link scrollto " href="#about"><?= $nav['about'] ?></a></li>
+                <li><a class="nav-link scrollto " href="#jobs"><?= $nav['job'] ?></a></li>
+                <li><a class="nav-link scrollto " href="#portfolio"><?= $nav['portfolio'] ?></a></li>
+                <li><a class="nav-link scrollto " href="#contact"><?= $nav['contact'] ?></a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>
-        <a href="#contact" class="get-started-btn scrollto"><?=$nav['resume']?></a>
+        <a href="#contact" class="get-started-btn scrollto"><?= $nav['resume'] ?></a>
         <div class="d-flex ps-0 ps-sm-0 ps-lg-3 pe-lg-0 pe-3">
-            <a class="language <?=$lang == 'pt'?'active':''?>" href="index.php?lang=pt">PT</a>
-            <span class="mx-1">|</span><a class="language <?=$lang == 'en'?'active':''?>" href="index.php?lang=en">EN</a>
+            <a class="language <?= $lang == 'pt' ? 'active' : '' ?>" href="index.php?lang=pt">PT</a>
+            <span class="mx-1">|</span><a class="language <?= $lang == 'en' ? 'active' : '' ?>"
+                                          href="index.php?lang=en">EN</a>
         </div>
     </div>
 </header>
@@ -138,13 +142,14 @@ require_once("./view/Language/lang." . $lang . ".php");
         <div class="dot">
             <div class="main-container w-100 h-100 pt-5 pt-lg-5 bg-dangers">
                 <div class="container h-100 mt-5 d-flex flex-column justify-content-between">
-                    <div class="row d-flex justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-start" data-aos="zoom-in" data-aos-delay="100">
-<!--                        <div class="col-xl-4 col-lg-5 col-md-5 col-sm-4">-->
+                    <div class="row d-flex justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-start"
+                         data-aos="zoom-in" data-aos-delay="100">
+                        <!--                        <div class="col-xl-4 col-lg-5 col-md-5 col-sm-4">-->
                         <div class="col-xl-4 col-lg-5 col-md-5 col-sm-4 col-12">
-<!--                            <div class="bg-transparent rounded-circle row mx-sm-auto mx-auto mx-lg-0 align-items-center"-->
-<!--                                 style="width: 230px; height: 230px; border: 2px solid white">-->
-<!--                                <img src="assets/img/fader-face.jpg" class="rounded-circle mx-autox d-blockx" alt="">-->
-<!--                            </div>-->
+                            <!--                            <div class="bg-transparent rounded-circle row mx-sm-auto mx-auto mx-lg-0 align-items-center"-->
+                            <!--                                 style="width: 230px; height: 230px; border: 2px solid white">-->
+                            <!--                                <img src="assets/img/fader-face.jpg" class="rounded-circle mx-autox d-blockx" alt="">-->
+                            <!--                            </div>-->
 
                             <div class="rounded position-relative image-box mt-5 mx-auto d-block mx-lg-0">
                                 <img src="assets/img/fader-face.jpg" class="rounded position-absolute w-100" alt="">
@@ -153,16 +158,16 @@ require_once("./view/Language/lang." . $lang . ".php");
                     </div>
                     <div class="row pt-5">
                         <div class="col-md-8">
-                            <p class="text-start text-active h6 mb-3"><?=$main['hi']?></p>
+                            <p class="text-start text-active h6 mb-3"><?= $main['hi'] ?></p>
                             <p class="text-start text-name">Fáder</p>
-                            <p class="text-start text-white-50 h3"><?=$main['occupation']?></p>
+                            <p class="text-start text-white-50 h3"><?= $main['occupation'] ?></p>
                         </div>
                         <div class="col-md-4 d-flex flex-column justify-content-end">
                             <div class="text-end">
                                 <p>
-                                    <a href="#portfolio" class="outline-white"><?=$nav['portfolio']?></a>
+                                    <a href="#portfolio" class="outline-white"><?= $nav['portfolio'] ?></a>
                                 </p>
-                                <p class="text-white-50 h6 mt-5"><?=$main['let_work_together']?></p>
+                                <p class="text-white-50 h6 mt-5"><?= $main['let_work_together'] ?></p>
                             </div>
                         </div>
                     </div>
@@ -177,7 +182,7 @@ require_once("./view/Language/lang." . $lang . ".php");
     <section id="about" class="about bg-main">
         <div class="container" data-aos="fade-up">
             <div class="section-title">
-                <h2><?=$about['title']?></h2>
+                <h2><?= $about['title'] ?></h2>
             </div>
 
             <div class="row">
@@ -185,12 +190,12 @@ require_once("./view/Language/lang." . $lang . ".php");
                     <div class="card bg-transparent border-0">
                         <div class="card-body">
                             <p class="text-white-50 text-start text-justify mb-3">
-                                <?=$about['description']?>
+                                <?= $about['description'] ?>
                             </p>
                             <ul class="skills-list">
-                                <?php foreach (explode(',',$about['technologies']) as $item):?>
-                                    <li><?=$item?></li>
-                                <?php endforeach?>
+                                <?php foreach (explode(',', $about['technologies']) as $item): ?>
+                                    <li><?= $item ?></li>
+                                <?php endforeach ?>
                             </ul>
                         </div>
                     </div>
@@ -209,7 +214,7 @@ require_once("./view/Language/lang." . $lang . ".php");
                 <div class="col-lg-8 col-sm-12">
 
                     <div class="section-title">
-                        <h2><?=$job['title']?></h2>
+                        <h2><?= $job['title'] ?></h2>
                     </div>
 
                     <div class="inner">
@@ -332,7 +337,7 @@ require_once("./view/Language/lang." . $lang . ".php");
         <div class="container" data-aos="fade-up">
 
             <div class="section-title">
-                <h2><?=$nav['portfolio']?></h2>
+                <h2><?= $nav['portfolio'] ?></h2>
             </div>
         </div>
     </section>
@@ -404,7 +409,7 @@ require_once("./view/Language/lang." . $lang . ".php");
     <section id="contact" class="contact bg-main">
         <div class="container" data-aos="fade-up">
             <div class="section-title">
-                <h2><?=$nav['contact']?></h2>
+                <h2><?= $nav['contact'] ?></h2>
             </div>
 
             <div class="row g-3" data-aos="fade-up" data-aos-delay="100">
@@ -416,7 +421,7 @@ require_once("./view/Language/lang." . $lang . ".php");
                             </div>
                             <div class="col-9">
                                 <p class="text-start text-white">Maputo, Moçambique</p>
-                                <p class="text-start text-white-50"><?=$main['contact_address']?></p>
+                                <p class="text-start text-white-50"><?= $main['contact_address'] ?></p>
                             </div>
                         </div>
                     </div>
@@ -429,7 +434,7 @@ require_once("./view/Language/lang." . $lang . ".php");
                             </div>
                             <div class="col-9">
                                 <p class="text-start text-white">fadermacuvele383@gmail.com</p>
-                                <p class="text-start text-white-50"><?=$main['contact_email']?></p>
+                                <p class="text-start text-white-50"><?= $main['contact_email'] ?></p>
                             </div>
                         </div>
                     </div>
@@ -442,7 +447,7 @@ require_once("./view/Language/lang." . $lang . ".php");
                             </div>
                             <div class="col-9">
                                 <p class="text-start text-white">+258 84 624 2199</p>
-                                <p class="text-start text-white-50"><?=$main['contact_call']?></p>
+                                <p class="text-start text-white-50"><?= $main['contact_call'] ?></p>
                             </div>
                         </div>
                     </div>
@@ -459,13 +464,13 @@ require_once("./view/Language/lang." . $lang . ".php");
                 <div class="col-lg-5 col-md-8 footer-contact">
                     <h3 class="text-white">Fáder<span>.</span></h3>
                     <p class="text-white-50">
-                        <?=$main['quote']?>
+                        <?= $main['quote'] ?>
                     </p>
                 </div>
                 <div class="col-lg-2 col-md-6 footer-links">
                 </div>
                 <div class="col-lg-5 col-md-6">
-                    <a href="#" class="outline-white float-end"><?=$nav['resume']?>
+                    <a href="#" class="outline-white float-end"><?= $nav['resume'] ?>
                     </a>
                 </div>
             </div>
@@ -475,15 +480,14 @@ require_once("./view/Language/lang." . $lang . ".php");
     <div class="container d-md-flex py-4">
         <div class="me-md-auto text-center text-md-start">
             <div class="copyright text-white">
-                &copy; <?=$main['designed_by']?> <a href="javascript:void(0)">Fáder</a>
+                &copy; <?= $main['designed_by'] ?> <a href="javascript:void(0)">Fáder</a>
             </div>
         </div>
         <div class="social-links text-center text-md-end pt-3 pt-md-0">
-            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            <a href="<?=$link['github']?>" target="_blank" rel="noreferrer" class="github"><i class="bx bxl-github"></i></a>
+            <a href="<?=$link['instagram']?>" target="_blank" rel="noreferrer" class="instagram"><i class="bx bxl-instagram"></i></a>
+            <a href="<?=$link['linkedin']?>" target="_blank" rel="noreferrer" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            <a href="<?=$link['codepen']?>" target="_blank" rel="noreferrer" class="codepen"><i class="bx bxl-codepen"></i></a>
         </div>
     </div>
 </footer>
