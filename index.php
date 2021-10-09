@@ -1,3 +1,19 @@
+<?php
+namespace Phppot;
+
+require_once("./Model/Core.php");
+
+use Phppot\DataSource;
+
+$core_model = new Core();
+$lang = isset($_GET['lang']) ? $_GET['lang'] : 'pt';
+$nav = $core_model->get_by_lang('nav', $lang);
+$main = $core_model->get_by_lang('main', $lang);
+$about = $core_model->get_by_lang('about', $lang);
+$job = $core_model->get_by_lang('job', $lang);
+
+require_once("./view/Language/lang." . $lang . ".php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,50 +50,53 @@
 <div class="div-media-icons">
     <ul class="media-icons">
         <li><a href="https://github.com/fader-azevedo" aria-label="GitHub" target="_blank" rel="noreferrer">
-            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><title>
-                GitHub</title>
-                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-            </svg>
-        </a></li>
+                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">
+                    <title>
+                        GitHub</title>
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+            </a></li>
         <li><a href="https://www.instagram.com/fader-azevedo" aria-label="Instagram" target="_blank" rel="noreferrer">
-            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram">
-                <title>
-                    Instagram</title>
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-            </svg>
-        </a></li>
+                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram">
+                    <title>
+                        Instagram</title>
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+            </a></li>
         <li><a href="https://twitter.com/fader_azevedo" aria-label="Twitter" target="_blank" rel="noreferrer">
-            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><title>
-                Twitter</title>
-                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
-            </svg>
-        </a></li>
+                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter">
+                    <title>
+                        Twitter</title>
+                    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                </svg>
+            </a></li>
         <li><a href="https://www.linkedin.com/in/fader" aria-label="Linkedin" target="_blank" rel="noreferrer">
-            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin">
-                <title>
-                    LinkedIn</title>
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                <rect x="2" y="9" width="4" height="12"></rect>
-                <circle cx="4" cy="4" r="2"></circle>
-            </svg>
-        </a></li>
+                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin">
+                    <title>
+                        LinkedIn</title>
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+            </a></li>
         <li><a href="https://codepen.io/fader_azevedo" aria-label="Codepen" target="_blank" rel="noreferrer">
-            <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-codepen"><title>
-                CodePen</title>
-                <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon>
-                <line x1="12" y1="22" x2="12" y2="15.5"></line>
-                <polyline points="22 8.5 12 15.5 2 8.5"></polyline>
-                <polyline points="2 15.5 12 8.5 22 15.5"></polyline>
-                <line x1="12" y1="2" x2="12" y2="8.5"></line>
-            </svg>
-        </a></li>
+                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-codepen">
+                    <title>
+                        CodePen</title>
+                    <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon>
+                    <line x1="12" y1="22" x2="12" y2="15.5"></line>
+                    <polyline points="22 8.5 12 15.5 2 8.5"></polyline>
+                    <polyline points="2 15.5 12 8.5 22 15.5"></polyline>
+                    <line x1="12" y1="2" x2="12" y2="8.5"></line>
+                </svg>
+            </a></li>
     </ul>
 </div>
 <div class="div-vertical-email">
@@ -101,14 +120,18 @@
         <!--        </h1>-->
         <nav id="navbar" class="navbar order-last order-lg-0">
             <ul>
-                <li><a class="nav-link scrollto " href="#about">Sobre</a></li>
-                <li><a class="nav-link scrollto " href="#jobs">Experiencia</a></li>
-                <li><a class="nav-link scrollto " href="#portfolio">Portfólio</a></li>
-                <li><a class="nav-link scrollto " href="#contact">Contacto</a></li>
+                <li><a class="nav-link scrollto " href="#about"><?=$nav['about']?></a></li>
+                <li><a class="nav-link scrollto " href="#jobs"><?=$nav['job']?></a></li>
+                <li><a class="nav-link scrollto " href="#portfolio"><?=$nav['portfolio']?></a></li>
+                <li><a class="nav-link scrollto " href="#contact"><?=$nav['contact']?></a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>
-        <a href="#contact" class="get-started-btn scrollto">Resumo</a>
+        <a href="#contact" class="get-started-btn scrollto"><?=$nav['resume']?></a>
+        <div class="d-flex ps-3">
+            <a class="language <?=$lang == 'pt'?'active':''?>" href="index.php?lang=pt">PT</a>
+            <span class="mx-1">|</span><a class="language <?=$lang == 'en'?'active':''?>" href="index.php?lang=en">EN</a>
+        </div>
     </div>
 </header>
 
@@ -127,16 +150,16 @@
                     </div>
                     <div class="row pt-5">
                         <div class="col-md-8">
-                            <p class="text-start text-active h6 mb-3">Olá, meu nome é</p>
+                            <p class="text-start text-active h6 mb-3"><?=$main['hi']?></p>
                             <p class="text-start text-name">Fáder</p>
-                            <p class="text-start text-white-50 h3">Desenvolvedor Web</p>
+                            <p class="text-start text-white-50 h3"><?=$main['occupation']?></p>
                         </div>
                         <div class="col-md-4 d-flex flex-column justify-content-end">
                             <div class="text-end">
                                 <p>
-                                    <a href="#portfolio" class="outline-white">Portfólio</a>
+                                    <a href="#portfolio" class="outline-white"><?=$nav['portfolio']?></a>
                                 </p>
-                                <p class="text-white-50 h6 mt-5">Vamos trabalhar juntos!?</p>
+                                <p class="text-white-50 h6 mt-5"><?=$main['let_work_together']?></p>
                             </div>
                         </div>
                     </div>
@@ -152,28 +175,20 @@
     <section id="about" class="about bg-main">
         <div class="container" data-aos="fade-up">
             <div class="section-title">
-                <h2>Sobre mim</h2>
+                <h2><?=$about['title']?></h2>
             </div>
 
             <div class="row">
                 <div class="col-md-8 ps-0">
                     <div class="card bg-transparent border-0">
                         <div class="card-body">
-                            <p class="text-white-50 text-start">Magnam dolores commodi suscipit. Necessitatibus eius
-                                consequatur ex aliquid fuga eum quidem. Sit sint
-                                consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
-                                ea.</p>
-
-                            <br>
+                            <p class="text-white-50 text-start text-justify mb-3">
+                                <?=$about['description']?>
+                            </p>
                             <ul class="skills-list">
-                                <li>JavaScript (ES6+)</li>
-                                <li>TypeScript</li>
-                                <li>React</li>
-                                <li>Bootstrap</li>
-                                <li>Node.js</li>
-                                <li>WordPress</li>
-                                <li>Codeigniter 3 & 4</li>
-                                <li>Laravel</li>
+                                <?php foreach (explode(',',$about['technologies']) as $item):?>
+                                    <li><?=$item?></li>
+                                <?php endforeach?>
                             </ul>
                         </div>
                     </div>
@@ -192,50 +207,118 @@
                 <div class="col-lg-8 col-sm-12">
 
                     <div class="section-title">
-                        <h2>Jobs</h2>
-                        <p class="text-start"></p>
+                        <h2><?=$job['title']?></h2>
                     </div>
 
                     <div class="inner">
                         <div role="tablist" id="pills-tab" class="nav companies">
-                            <button class="job-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
-                                    type="button" role="tab" aria-controls="pills-home" aria-selected="false">Big bazar
+                            <button class="job-link active" id="pills-home-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-home"
+                                    type="button" role="tab" aria-controls="pills-home" aria-selected="false">Green
+                                Revolution
                             </button>
-                            <button class="job-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
-                                    type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Eizy Technology
+                            <button class="job-link" id="pills-profile-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-profile"
+                                    type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Eizy
+                                Technology
                             </button>
-                            <button class="job-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
-                                    type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Classic Security
+                            <button class="job-link" id="pills-contact-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-contact"
+                                    type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Classic
+                                Security
                             </button>
                         </div>
 
                         <div class="tab-content ps-lg-5" id="pills-tabContent">
-                            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                            <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                                 aria-labelledby="pills-home-tab">
                                 <span class="text-white">Desenvolvedor Web</span>
-                                <span class="text-active">&nbsp;@&nbsp;
-                            <a  href="https://www.bigbazar.com/" rel="noopener noreferrer" target="_blank">Big bazar</a>
-                        </span>
-                                <p class="range text-white-50">May 2018 - Present</p>
+                                <label class="text-active">&nbsp;@&nbsp;
+                                    <a href="https://www.bigbazar.com/" rel="noopener noreferrer" target="_blank">
+                                        Green Revolution
+                                    </a>
+                                </label>
+                                <p class="range text-white-50">Agosto 2020 - Presente</p>
                                 <div class="text-white-50">
                                     <ul class="desc">
-                                        <li>Write modern, performant, maintainable code for a diverse array of
-                                            client and internal projects
+                                        <li>
+                                            Colaborou com uma pequena equipe de design para criar e liderar uma
+                                            nova marca, que resultou em <a href="https://bigbazar.co.mz/"
+                                                                           rel="noopener noreferrer" target="_blank">Big
+                                                Bazar</a>
                                         </li>
-                                        <li>Work with a variety of different languages, platforms, frameworks,
-                                            and content management systems such as JavaScript, TypeScript,
-                                            Gatsby, React, Craft, WordPress, Prismic, and Netlify
+                                        <li>Desenvolvimento de sitemas com códigos modernos, de alto desempenho e
+                                            sustentável para projetos internos e externos;
                                         </li>
-                                        <li>Communicate with multi-disciplinary teams of engineers, designers,
-                                            producers, and clients on a daily basis
+                                        <li>
+                                            Trabalho com uma variedade de diferentes linguagens, plataformas, estruturas
+                                            e sistemas de gerenciamento de
+                                            conteúdo, tendo muito foco no framework codeigniter;
+                                        </li>
+                                        <li>
+                                            Comunicação com equipes multidisciplinares de engenheiros, designers e
+                                            clientes diariamente.
                                         </li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                                2
+                            <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                                 aria-labelledby="pills-profile-tab">
+                                <span class="text-white">IT Consultant</span>
+                                <label class="text-active">&nbsp;@&nbsp;
+                                    <a href="https://www.eiztec.com/" rel="noopener noreferrer" target="_blank">
+                                        Eizy technology, lda
+                                    </a>
+                                </label>
+                                <p class="range text-white-50">Junho 2019 - Agosto 2020</p>
+                                <div class="text-white-50">
+                                    <ul class="desc">
+                                        <li>
+                                            Suporte, recomendações para tecnologias de informação existentes para
+                                            melhoria
+                                        </li>
+                                        <li>
+                                            Montagem e manutenção de redes de computadores
+                                        </li>
+                                        <li>
+                                            Código desenvolvido e mantido para sites internos e de clientes
+                                            principalmente usando HTML, CSS, Sass, JavaScript e jQuery
+                                        </li>
+                                        <li>
+                                            Colaboração com designers e equipe de gerenciamento para desenvolver,
+                                            documentar e gerenciar o site de marketing digital disignada <a
+                                                    href="https://www.superentidades.co.mz/" rel="noopener noreferrer"
+                                                    target="_blank">Super Entidades</a>
+                                        </li>
+                                        <li>
+                                            Testes manuais em navegadores diferentes e dispositivos móveis para
+                                            garantir compatibilidade e capacidade de resposta entre navegadores
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-                                3
+                            <div class="tab-pane fade" id="pills-contact" role="tabpanel"
+                                 aria-labelledby="pills-contact-tab">
+                                <span class="text-white">Operador de câmeras</span>
+                                <label class="text-active">&nbsp;@&nbsp;
+                                    <a href="https://www.eiztec.com/" rel="noopener noreferrer" target="_blank">
+                                        Classic Security System
+                                    </a>
+                                </label>
+                                <p class="range text-white-50">Julho 2017 - Fevereiro 2019</p>
+                                <div class="text-white-50">
+                                    <ul class="desc">
+                                        <li>
+                                            Garantir backups de vídeos das câmeras de segurança;
+                                        </li>
+                                        <li>
+                                            Controle de acesso de pedestres e carros;
+                                        </li>
+                                        <li>
+                                            Registro de ocorrência.
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -247,8 +330,7 @@
         <div class="container" data-aos="fade-up">
 
             <div class="section-title">
-                <h2>Portfólio</h2>
-                <p class="text-start"></p>
+                <h2><?=$nav['portfolio']?></h2>
             </div>
         </div>
     </section>
@@ -320,7 +402,7 @@
     <section id="contact" class="contact bg-main">
         <div class="container" data-aos="fade-up">
             <div class="section-title">
-                <h2>Contacto</h2>
+                <h2><?=$nav['contact']?></h2>
             </div>
 
             <div class="row g-3" data-aos="fade-up" data-aos-delay="100">
@@ -332,7 +414,7 @@
                             </div>
                             <div class="col-9">
                                 <p class="text-start text-white">Maputo, Moçambique</p>
-                                <p class="text-start text-white-50">Bairro polana caniço A </p>
+                                <p class="text-start text-white-50"><?=$main['contact_address']?></p>
                             </div>
                         </div>
                     </div>
@@ -345,7 +427,7 @@
                             </div>
                             <div class="col-9">
                                 <p class="text-start text-white">fadermacuvele383@gmail.com</p>
-                                <p class="text-start text-white-50">Send us your query anytime!</p>
+                                <p class="text-start text-white-50"><?=$main['contact_email']?></p>
                             </div>
                         </div>
                     </div>
@@ -358,7 +440,7 @@
                             </div>
                             <div class="col-9">
                                 <p class="text-start text-white">+258 84 624 2199</p>
-                                <p class="text-start text-white-50">Any day 9h ate 19h</p>
+                                <p class="text-start text-white-50"><?=$main['contact_call']?></p>
                             </div>
                         </div>
                     </div>
@@ -375,14 +457,13 @@
                 <div class="col-lg-5 col-md-8 footer-contact">
                     <h3 class="text-white">Fáder<span>.</span></h3>
                     <p class="text-white-50">
-                        In the mean time shall soon find out the cause of this: What was the epicurus towards their
-                        children.
+                        <?=$main['quote']?>
                     </p>
                 </div>
                 <div class="col-lg-2 col-md-6 footer-links">
                 </div>
                 <div class="col-lg-5 col-md-6">
-                    <a href="#" class="outline-white float-end">Resumo
+                    <a href="#" class="outline-white float-end"><?=$nav['resume']?>
                     </a>
                 </div>
             </div>
@@ -392,10 +473,7 @@
     <div class="container d-md-flex py-4">
         <div class="me-md-auto text-center text-md-start">
             <div class="copyright text-white">
-                &copy; Todos direitos reservados
-            </div>
-            <div class="credits text-white-50">
-                Desenhado por <a href="/">Fader</a>
+                &copy; <?=$main['designed_by']?> <a href="javascript:void(0)">Fáder</a>
             </div>
         </div>
         <div class="social-links text-center text-md-end pt-3 pt-md-0">
@@ -408,17 +486,12 @@
     </div>
 </footer>
 
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center">
-    <i class="bi bi-arrow-up-short"></i>
-</a>
-
 <!-- Vendor JS Files -->
 <script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/js/jquery.min.js"></script>
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
 <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="assets/vendor/php-email-form/validate.js"></script>
-<script src="assets/vendor/purecounter/purecounter.js"></script>
 <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 <script src="assets/js/main.js"></script>
 <script type="text/javascript" src="assets/js/vanilla-tilt.min.js"></script>

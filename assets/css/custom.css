@@ -1,8 +1,4 @@
 @import "mono-font/style.css";
-section {
-
-    /*!*padding:10px 0 10px 30px/*/
-}
 body{
     font-family: "SF Mono Regular", sans-serif;
 }
@@ -82,33 +78,8 @@ body{
     color: #64ffda;
 }
 
-.get-started-btn {
-    margin-left: 30px;
-    background: transparent;
-    color: #64ffda;
-    border: #64ffda 2px solid;
-    border-radius: 2px;
-    padding: 8px 25px;
-    white-space: nowrap;
-    transition: 0.3s;
-    font-size: 14px;
-    font-weight: 600;
-    display: inline-block;
-}
-
-.get-started-btn:hover {
-    color: #64ffda;
-    background: rgba(100, 255, 218, 0.2) !important;
-}
-/*header*/
-
 .dot {
     background: url("../img/dot.png");
-}
-.bg-main{
-    /*background-color: #0a192f;*/
-    /*background-color: #07090f;*/
-    background-color: #111111;
 }
 .banner-effect {
     position: relative;
@@ -149,8 +120,13 @@ body{
     -webkit-background-clip: text;
     background-position: 0 0;
     animation: back 20s linear infinite;
-    /*font-family: "Poppins", sans-serif;*/
     font-family: "SF Mono Bold", sans-serif;
+}
+
+@keyframes back {
+    100% {
+        background-position: 2000px 0;
+    }
 }
 
 /*sm*/
@@ -177,13 +153,6 @@ body{
     }
 }
 
-
-@keyframes back {
-    100% {
-        background-position: 2000px 0;
-    }
-}
-
 a.outline-white {
     color: #64ffda;
     text-decoration: none;
@@ -195,7 +164,6 @@ a.outline-white {
 a.outline-white:hover {
     background: rgba(100, 255, 218, 0.2) !important;
 }
-
 
 a.outline-dark {
     color: #1B1B1BE5;

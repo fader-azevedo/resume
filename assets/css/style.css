@@ -3,9 +3,27 @@ body {
     color: #444444;
 }
 
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #64ffda;
+    border: 3px solid #2a6e5b;
+    border-radius: 10px;
+}
+
 a {
     color: #64ffda;
     text-decoration: none;
+}
+
+a.language {
+    color: rgba(255, 255, 255, .5);
+}
+
+a.language.active {
+    color: #64ffda;
 }
 
 a:hover {
@@ -27,11 +45,13 @@ h1, h2, h3, h4, h5, h6 {
     right: 15px;
     bottom: 15px;
     z-index: 996;
-    background: #64ffda;
+    background: rgba(100, 255, 218, 0.2) !important;
     width: 40px;
     height: 40px;
     border-radius: 4px;
     transition: all 0.4s;
+    color: #64ffda;
+    border: #64ffda 2px solid;
 }
 
 .back-to-top i {
@@ -45,7 +65,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .back-to-top:hover i {
-    color: #000000 !important;
+    color: #64ffda !important;
 }
 
 .back-to-top.active {
@@ -66,12 +86,19 @@ h1, h2, h3, h4, h5, h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-    /*background: #fff;*/
-    /*background: transparent !important;*/
-    background: #111111 !important;
     transition: all 0.5s;
     z-index: 997;
     padding: 20px 0;
+}
+
+.bg-transparent {
+    background: transparent !important;
+}
+
+.bg-main {
+    /*background-color: #0a192f;*/
+    /*background-color: #07090f;*/
+    background-color: #111111 !important;
 }
 
 #header.header-scrolled {
@@ -1010,6 +1037,10 @@ section {
     color: #fff;
 }
 
+#footer .copyright {
+    font-size: 13px;
+}
+
 #footer .credits {
     padding-top: 5px;
     font-size: 13px;
@@ -1064,6 +1095,7 @@ section {
 #jobs ul.desc li {
     position: relative;
     font-size: 13px;
+    font-weight: 100;
     padding-left: 30px;
     margin-bottom: 10px;
 }
@@ -1073,8 +1105,6 @@ section {
     position: absolute;
     left: 0;
     color: #64ffda;
-    font-size: 12px;
-    line-height: 12px;
 }
 
 .job-link {
@@ -1103,7 +1133,7 @@ section {
 
 .job-link.active {
     border-left: 2px solid #0dcaf0 !important;
-    color: #0dcaf0 !important;
+    color: #64ffda !important;
 }
 
 @media (max-width: 480px) {
@@ -1165,3 +1195,7 @@ section {
 /**, ::before, ::after {*/
 /*    box-sizing: inherit;*/
 /*}*/
+
+.text-justify {
+    text-align: justify !important;
+}
