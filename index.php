@@ -461,15 +461,13 @@ require_once("./view/Language/lang." . $lang . ".php");
     <div class="footer-top">
         <div class="container">
             <div class="row">
-                <div class="col-lg-5 col-md-8 footer-contact">
+                <div class="col-lg-7 col-md-8 footer-contact">
                     <h3 class="text-white">Fáder<span>.</span></h3>
                     <p class="text-white-50">
                         <?= $main['quote'] ?>
                     </p>
                 </div>
-                <div class="col-lg-2 col-md-6 footer-links">
-                </div>
-                <div class="col-lg-5 col-md-6">
+                <div class="col-lg-5 col-md-4">
                     <a href="#" class="outline-white float-end"><?= $nav['resume'] ?>
                     </a>
                 </div>
