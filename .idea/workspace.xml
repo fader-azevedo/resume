@@ -5,26 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8bfb1032-77c4-408d-b8ac-245ede9b4f63" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/css/mono-font/SFMonoBold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/mono-font/SFMonoBoldItalic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/mono-font/SFMonoHeavy.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/mono-font/SFMonoHeavyItalic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/mono-font/SFMonoLight.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/mono-font/SFMonoLightItalic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/mono-font/SFMonoMedium.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/mono-font/SFMonoMediumItalic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/mono-font/SFMonoRegular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/mono-font/SFMonoRegularItalic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/mono-font/SFMonoSemibold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/mono-font/SFMonoSemiboldItalic.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/mono-font/example.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/mono-font/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/vanilla-tilt.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/custom.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/vendor/bootstrap/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/vendor/bootstrap/css/bootstrap.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -106,7 +89,7 @@
       <workItem from="1632371346105" duration="246000" />
       <workItem from="1633520411267" duration="8515000" />
       <workItem from="1633628889195" duration="13259000" />
-      <workItem from="1633702372100" duration="20608000" />
+      <workItem from="1633702372100" duration="33173000" />
     </task>
     <servers />
   </component>
