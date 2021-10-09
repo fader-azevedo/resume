@@ -24,7 +24,7 @@ class Core
 
     public function get_all($table, $array)
     {
-        $result = $this->ds->select('SELECT * FROM ' . $table, '', $array);
-        return $result;
+        $result = $this->ds->select('SELECT * FROM ' . $table);
+        return $result ? $result[0] : false;
     }
 }
