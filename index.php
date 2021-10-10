@@ -11,7 +11,7 @@ $nav = $core_model->get_by_lang('nav', $lang);
 $main = $core_model->get_by_lang('main', $lang);
 $about = $core_model->get_by_lang('about', $lang);
 $job = $core_model->get_by_lang('job', $lang);
-$link = $core_model->get_all('link',null);
+$link = $core_model->get_all('link', null);
 
 require_once("./view/Language/lang." . $lang . ".php");
 ?>
@@ -28,11 +28,6 @@ require_once("./view/Language/lang." . $lang . ".php");
 
     <!-- Favicons -->
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-          rel="stylesheet">
-
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -43,13 +38,12 @@ require_once("./view/Language/lang." . $lang . ".php");
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
     <link href="assets/css/style.css" rel="stylesheet">
-    <link href="assets/css/custom.css" rel="stylesheet">
 </head>
 <body>
 
 <div class="div-media-icons d-sm-none d-none d-lg-block">
     <ul class="media-icons">
-        <li><a href="<?=$link['github']?>" aria-label="GitHub" target="_blank" rel="noreferrer">
+        <li><a href="<?= $link['github'] ?>" aria-label="GitHub" target="_blank" rel="noreferrer">
                 <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">
                     <title>
@@ -57,7 +51,7 @@ require_once("./view/Language/lang." . $lang . ".php");
                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                 </svg>
             </a></li>
-        <li><a href="<?=$link['instagram']?>" aria-label="Instagram" target="_blank" rel="noreferrer">
+        <li><a href="<?= $link['instagram'] ?>" aria-label="Instagram" target="_blank" rel="noreferrer">
                 <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram">
                     <title>
@@ -67,7 +61,8 @@ require_once("./view/Language/lang." . $lang . ".php");
                     <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                 </svg>
             </a></li>
-        <li class="d-none"><a href="https://twitter.com/FaderAzevedo1" aria-label="Twitter" target="_blank" rel="noreferrer">
+        <li class="d-none"><a href="https://twitter.com/FaderAzevedo1" aria-label="Twitter" target="_blank"
+                              rel="noreferrer">
                 <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter">
                     <title>
@@ -75,7 +70,7 @@ require_once("./view/Language/lang." . $lang . ".php");
                     <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
                 </svg>
             </a></li>
-        <li><a href="<?=$link['linkedin']?>" aria-label="Linkedin" target="_blank"
+        <li><a href="<?= $link['linkedin'] ?>" aria-label="Linkedin" target="_blank"
                rel="noreferrer">
                 <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin">
@@ -86,7 +81,7 @@ require_once("./view/Language/lang." . $lang . ".php");
                     <circle cx="4" cy="4" r="2"></circle>
                 </svg>
             </a></li>
-        <li><a href="<?=$link['codepen']?>" aria-label="Codepen" target="_blank" rel="noreferrer">
+        <li><a href="<?= $link['codepen'] ?>" aria-label="Codepen" target="_blank" rel="noreferrer">
                 <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-codepen">
                     <title>
@@ -339,6 +334,88 @@ require_once("./view/Language/lang." . $lang . ".php");
             <div class="section-title">
                 <h2><?= $nav['portfolio'] ?></h2>
             </div>
+            <div class="row">
+                <div class="col-12">
+                    <ul class="dnNJYD">
+                        <li class="eeeRej">
+                            <div class="project-content">
+                                <div><p class="project-overline">Featured Project</p>
+                                    <h3 class="project-title">
+                                        <a href="#" target="_blank">
+                                            Halcyon Theme
+                                        </a>
+                                    </h3>
+                                    <div class="project-description">
+                                        <p>
+                                        </p>
+                                    </div>
+                                    <ul class="project-tech-list">
+                                        <li>VS Code</li>
+                                        <li>Sublime Text</li>
+                                        <li>Atom</li>
+                                        <li>iTerm2</li>
+                                        <li>Hyper</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="project-image">
+                                <a href="#" target="_blank">
+                                    <div class="gatsby-image-wrapper gatsby-image-wrapper-constrained img">
+                                        <div style="max-width: 700px; display: block;">
+                                            <img alt=""
+                                                 src="data:image/svg+xml;charset=utf-8,%3Csvg height='238' width='700' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
+                                                 style="max-width: 100%; display: block; position: static;">
+                                        </div>
+                                        <picture>
+                                            <img sizes="(min-width: 700px) 700px, 100vw" decoding="async"
+                                                 src="./assets/img/banner.png"
+                                                 style="object-fit: cover; opacity: 1;" alt="">
+                                        </picture>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="eeeRej">
+                            <div class="project-content">
+                                <div><p class="project-overline">Featured Project</p>
+                                    <h3 class="project-title">
+                                        <a href="#" target="_blank">
+                                            Halcyon Theme
+                                        </a>
+                                    </h3>
+                                    <div class="project-description">
+                                        <p>
+                                        </p>
+                                    </div>
+                                    <ul class="project-tech-list">
+                                        <li>VS Code</li>
+                                        <li>Sublime Text</li>
+                                        <li>Atom</li>
+                                        <li>iTerm2</li>
+                                        <li>Hyper</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="project-image">
+                                <a href="#" target="_blank">
+                                    <div class="gatsby-image-wrapper gatsby-image-wrapper-constrained img">
+                                        <div style="max-width: 700px; display: block;">
+                                            <img alt=""
+                                                 src="data:image/svg+xml;charset=utf-8,%3Csvg height='238' width='700' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
+                                                 style="max-width: 100%; display: block; position: static;">
+                                        </div>
+                                        <picture>
+                                            <img sizes="(min-width: 700px) 700px, 100vw" decoding="async"
+                                                 src="./assets/img/banner.png"
+                                                 style="object-fit: cover; opacity: 1;" alt="">
+                                        </picture>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -482,10 +559,14 @@ require_once("./view/Language/lang." . $lang . ".php");
             </div>
         </div>
         <div class="social-links text-center text-md-end pt-3 pt-md-0">
-            <a href="<?=$link['github']?>" target="_blank" rel="noreferrer" class="github"><i class="bx bxl-github"></i></a>
-            <a href="<?=$link['instagram']?>" target="_blank" rel="noreferrer" class="instagram"><i class="bx bxl-instagram"></i></a>
-            <a href="<?=$link['linkedin']?>" target="_blank" rel="noreferrer" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-            <a href="<?=$link['codepen']?>" target="_blank" rel="noreferrer" class="codepen"><i class="bx bxl-codepen"></i></a>
+            <a href="<?= $link['github'] ?>" target="_blank" rel="noreferrer" class="github"><i
+                        class="bx bxl-github"></i></a>
+            <a href="<?= $link['instagram'] ?>" target="_blank" rel="noreferrer" class="instagram"><i
+                        class="bx bxl-instagram"></i></a>
+            <a href="<?= $link['linkedin'] ?>" target="_blank" rel="noreferrer" class="linkedin"><i
+                        class="bx bxl-linkedin"></i></a>
+            <a href="<?= $link['codepen'] ?>" target="_blank" rel="noreferrer" class="codepen"><i
+                        class="bx bxl-codepen"></i></a>
         </div>
     </div>
 </footer>
