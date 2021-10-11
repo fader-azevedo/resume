@@ -311,13 +311,24 @@ require_once("./view/Language/lang." . $lang . ".php");
                                 <div class="text-white-50">
                                     <ul class="desc">
                                         <li>
-                                            Garantir backups de vídeos das câmeras de segurança;
+                                            Garantir backups de filmagens antigas no computador;
                                         </li>
                                         <li>
-                                            Controle de acesso de pedestres e carros;
+                                            Registrar ocorrências estranhas e relatar para segurança, se necessário.
                                         </li>
                                         <li>
-                                            Registro de ocorrência.
+                                            Controlar a operação do equipamento de segurança como câmeras desligadas e
+                                            falta de iluminação no prédio;
+                                        </li>
+                                        <li>
+                                            Manter os equipamentos usados na sala de controle
+                                        </li>
+                                        <li>
+                                            Elaborar um relatório mensal sobre os incidentes, desafios e problemas
+                                            identificados.
+                                        </li>
+                                        <li>
+                                            visualização e gravação de imagens capturadas
                                         </li>
                                     </ul>
                                 </div>
@@ -340,41 +351,121 @@ require_once("./view/Language/lang." . $lang . ".php");
                         <li class="eeeRej">
                             <div class="project-content">
                                 <div>
-                                    <p class="project-overline">Featured Project</p>
+                                    <p class="project-overline"></p>
                                     <h3 class="project-title">
-                                        <a href="#" target="_blank" class="link-default">
-                                            Bigb Soft
+                                        <a href="https://bigbsoft.com/" target="_blank" class="link-default">
+                                            BigB Soft
                                         </a>
                                     </h3>
                                     <div class="project-description">
                                         <p>
-                                            Meu interesse em desenvolvimento web começou em 2015, quando tive trabalho
-                                            semestral na faculdade de fazer uma pagina web usando CMS,
+                                            BigB Soft foi desenvolvido com o objetivo facilitar todo o processo de vendas e facturação
+                                        </p>
+                                        <p class="text-end pt-lg-3 mb-lg-1">
+                                            <a href="https://bigbsoft.com/" target="_blank" class="outline-white sm" title="BigB Soft">Visitar</a>
+                                            <a href="javascript:void(0)" class="outline-white sm">Imagens</a>
                                         </p>
                                     </div>
                                     <ul class="project-tech-list">
                                         <li>Codeigniter 3</li>
-                                        <li>Bootstrap</li>
+                                        <li>Bootstrap 4</li>
                                         <li>React</li>
                                         <li>Mysql</li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="project-image">
-                                <a href="#" target="_blank">
-                                    <div class="gatsby-image-wrapper gatsby-image-wrapper-constrained img">
-                                        <div style="max-width: 700px; display: block;">
-                                            <img alt=""
-                                                 src="data:image/svg+xml;charset=utf-8,%3Csvg height='238' width='700' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
-                                                 style="max-width: 100%; display: block; position: static;">
-                                        </div>
-                                        <picture>
-                                            <img sizes="(min-width: 700px) 700px, 100vw" decoding="async"
-                                                 src="./assets/img/banner.png"
-                                                 style="object-fit: cover; opacity: 1;" alt="">
-                                        </picture>
+                                <a href="javascript:void(0)" class="bg-success">
+                                    <div class="gatsby-image-wrapper">
+                                        <img alt=""
+                                             src="data:image/svg+xml;charset=utf-8,%3Csvg height='300' width='700' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
+                                             style="max-width: 100%; display: block; position: static;">
+
+                                        <img sizes="(min-width: 700px) 700px, 100vw" decoding="async"
+                                             src="./assets/img/portfolio/02.jpg" alt="">
                                     </div>
                                 </a>
+                                <div class="overlay"></div>
+                            </div>
+                        </li>
+                        <li class="eeeRej">
+                            <div class="project-content">
+                                <div>
+                                    <p class="project-overline"></p>
+                                    <h3 class="project-title">
+                                        <a href="https://bigbsoft.com/" target="_blank" class="link-default">
+                                            BigB Soft
+                                        </a>
+                                    </h3>
+                                    <div class="project-description">
+                                        <p>
+                                            BigB Soft foi desenvolvido com o objetivo facilitar todo o processo de vendas e facturação
+                                        </p>
+                                        <p class="text-end pt-lg-3 mb-lg-1">
+                                            <a href="https://bigbsoft.com/" target="_blank" class="outline-white sm" title="BigB Soft">Visitar</a>
+                                            <a href="javascript:void(0)" class="outline-white sm">Imagens</a>
+                                        </p>
+                                    </div>
+                                    <ul class="project-tech-list">
+                                        <li>Codeigniter 3</li>
+                                        <li>Bootstrap 4</li>
+                                        <li>React</li>
+                                        <li>Mysql</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="project-image">
+                                <a href="javascript:void(0)" class="bg-success">
+                                    <div class="gatsby-image-wrapper">
+                                        <img alt=""
+                                             src="data:image/svg+xml;charset=utf-8,%3Csvg height='300' width='700' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
+                                             style="max-width: 100%; display: block; position: static;">
+
+                                        <img sizes="(min-width: 700px) 700px, 100vw" decoding="async"
+                                             src="./assets/img/portfolio/02.jpg" alt="">
+                                    </div>
+                                </a>
+                                <div class="overlay"></div>
+                            </div>
+                        </li>
+                        <li class="eeeRej">
+                            <div class="project-content">
+                                <div>
+                                    <p class="project-overline"></p>
+                                    <h3 class="project-title">
+                                        <a href="https://bigbsoft.com/" target="_blank" class="link-default">
+                                            BigB Soft
+                                        </a>
+                                    </h3>
+                                    <div class="project-description">
+                                        <p>
+                                            BigB Soft foi desenvolvido com o objetivo facilitar todo o processo de vendas e facturação
+                                        </p>
+                                        <p class="text-end pt-lg-3 mb-lg-1">
+                                            <a href="https://bigbsoft.com/" target="_blank" class="outline-white sm" title="BigB Soft">Visitar</a>
+                                            <a href="javascript:void(0)" class="outline-white sm">Imagens</a>
+                                        </p>
+                                    </div>
+                                    <ul class="project-tech-list">
+                                        <li>Codeigniter 3</li>
+                                        <li>Bootstrap 4</li>
+                                        <li>React</li>
+                                        <li>Mysql</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="project-image">
+                                <a href="javascript:void(0)" class="bg-success">
+                                    <div class="gatsby-image-wrapper">
+                                        <img alt=""
+                                             src="data:image/svg+xml;charset=utf-8,%3Csvg height='300' width='700' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
+                                             style="max-width: 100%; display: block; position: static;">
+
+                                        <img sizes="(min-width: 700px) 700px, 100vw" decoding="async"
+                                             src="./assets/img/portfolio/02.jpg" alt="">
+                                    </div>
+                                </a>
+                                <div class="overlay"></div>
                             </div>
                         </li>
                     </ul>
@@ -383,68 +474,6 @@ require_once("./view/Language/lang." . $lang . ".php");
         </div>
     </section>
 
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services bg-main d-none">
-        <div class="container" data-aos="fade-up">
-
-            <div class="section-title">
-                <h2>Services</h2>
-                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-                    consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.</p>
-            </div>
-
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-                        <i class="bi bi-briefcase"></i>
-                        <h4><a href="#">Lorem Ipsum</a></h4>
-                        <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-                            occaecati</p>
-                    </div>
-                </div>
-                <div class="col-md-6 mt-4 mt-md-0">
-                    <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-                        <i class="bi bi-card-checklist"></i>
-                        <h4><a href="#">Dolor Sitema</a></h4>
-                        <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat tarad limino ata</p>
-                    </div>
-                </div>
-                <div class="col-md-6 mt-4 mt-md-0">
-                    <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
-                        <i class="bi bi-bar-chart"></i>
-                        <h4><a href="#">Sed ut perspiciatis</a></h4>
-                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                            pariatur</p>
-                    </div>
-                </div>
-                <div class="col-md-6 mt-4 mt-md-0">
-                    <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
-                        <i class="bi bi-binoculars"></i>
-                        <h4><a href="#">Nemo Enim</a></h4>
-                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                            anim id est laborum</p>
-                    </div>
-                </div>
-                <div class="col-md-6 mt-4 mt-md-0">
-                    <div class="icon-box" data-aos="fade-up" data-aos-delay="500">
-                        <i class="bi bi-brightness-high"></i>
-                        <h4><a href="#">Magni Dolore</a></h4>
-                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-                            voluptatum deleniti atque</p>
-                    </div>
-                </div>
-                <div class="col-md-6 mt-4 mt-md-0">
-                    <div class="icon-box" data-aos="fade-up" data-aos-delay="600">
-                        <i class="bi bi-calendar4-week"></i>
-                        <h4><a href="#">Eiusmod Tempor</a></h4>
-                        <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta
-                            nobis est eligendi</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section><!-- End Services Section -->
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact bg-main">
