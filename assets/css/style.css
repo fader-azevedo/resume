@@ -827,6 +827,7 @@ section {
     padding: 0px;
     margin: 0px;
 }
+
 .eeeRej {
     position: relative;
     display: grid;
@@ -835,12 +836,14 @@ section {
     -webkit-box-align: center;
     align-items: center;
 }
+
 .eeeRej:nth-of-type(2n+1) .project-image {
     grid-column: 1 / 8;
 }
+
 .eeeRej .project-image {
     box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.5);
-    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     grid-area: 1 / 6 / -1 / -1;
     position: relative;
     z-index: 1;
@@ -871,9 +874,15 @@ section {
     z-index: -1;
     transition: 0.9s;
 }
-.gatsby-image-wrapper:hover img{
+
+.gatsby-image-wrapper:hover img {
     background: rgba(27, 27, 27, 0) !important;
 }
+
+.eeeRej {
+    margin-bottom: 40px !important;
+}
+
 
 .eeeRej .project-links {
     display: flex;
@@ -883,6 +892,7 @@ section {
     margin-top: 10px;
     margin-left: -10px;
 }
+
 .eeeRej .project-links a {
     display: flex;
     -webkit-box-pack: center;
@@ -891,6 +901,7 @@ section {
     align-items: center;
     padding: 10px;
 }
+
 .eeeRej .project-content {
     position: relative;
     grid-area: 1 / 1 / -1 / 7;
@@ -901,13 +912,15 @@ section {
     font-size: 12px;
     font-weight: 400;
 }
+
 .eeeRej .project-title {
     font-size: 22px;
 }
+
 .eeeRej .project-description {
     /*box-shadow: 0 10px 30px -15px rgba(27, 27, 27, 0.7);*/
     box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.5);
-    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     position: relative;
     z-index: 2;
     padding: 25px;
@@ -922,6 +935,7 @@ section {
     grid-column: 7 / -1;
     text-align: right;
 }
+
 .eeeRej .project-tech-list {
     display: flex;
     flex-wrap: wrap;
@@ -931,10 +945,12 @@ section {
     padding: 0px;
     list-style: none;
 }
+
 .eeeRej:nth-of-type(2n+1) .project-tech-list {
-     -webkit-box-pack: end;
+    -webkit-box-pack: end;
     justify-content: flex-end;
 }
+
 .eeeRej .project-tech-list li {
     margin: 0px 20px 5px 0px;
     color: #a8a6ac;
@@ -1311,12 +1327,14 @@ section {
     }
 }
 
-a.link-default{
+a.link-default {
     color: #cfcfcf;
 }
+
 a.link-default:hover {
     color: #64ffda;
 }
+
 a.outline-white {
     color: #64ffda;
     text-decoration: none;
@@ -1325,13 +1343,16 @@ a.outline-white {
     border: 2px solid #64ffda;
     border-radius: 2px;
 }
-a.outline-white.sm{
+
+a.outline-white.sm {
     padding: 7px 10px !important;
     font-size: 10px !important;
 }
+
 a.outline-white:hover {
     background: rgba(100, 255, 218, 0.2) !important;
 }
+
 button.outline-white {
     color: #64ffda;
     text-decoration: none;
@@ -1341,6 +1362,7 @@ button.outline-white {
     border-radius: 2px;
     background-color: transparent;
 }
+
 button.outline-white:hover {
     background: rgba(100, 255, 218, 0.2) !important;
 }
