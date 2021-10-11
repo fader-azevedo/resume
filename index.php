@@ -39,7 +39,7 @@ require_once("./view/Language/lang." . $lang . ".php");
 
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
-<body>
+<body class="">
 
 <div class="div-media-icons d-sm-none d-none d-lg-block">
     <ul class="media-icons">
@@ -339,60 +339,24 @@ require_once("./view/Language/lang." . $lang . ".php");
                     <ul class="dnNJYD">
                         <li class="eeeRej">
                             <div class="project-content">
-                                <div><p class="project-overline">Featured Project</p>
+                                <div>
+                                    <p class="project-overline">Featured Project</p>
                                     <h3 class="project-title">
-                                        <a href="#" target="_blank">
-                                            Halcyon Theme
+                                        <a href="#" target="_blank" class="link-default">
+                                            Bigb Soft
                                         </a>
                                     </h3>
                                     <div class="project-description">
                                         <p>
+                                            Meu interesse em desenvolvimento web começou em 2015, quando tive trabalho
+                                            semestral na faculdade de fazer uma pagina web usando CMS,
                                         </p>
                                     </div>
                                     <ul class="project-tech-list">
-                                        <li>VS Code</li>
-                                        <li>Sublime Text</li>
-                                        <li>Atom</li>
-                                        <li>iTerm2</li>
-                                        <li>Hyper</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="project-image">
-                                <a href="#" target="_blank">
-                                    <div class="gatsby-image-wrapper gatsby-image-wrapper-constrained img">
-                                        <div style="max-width: 700px; display: block;">
-                                            <img alt=""
-                                                 src="data:image/svg+xml;charset=utf-8,%3Csvg height='238' width='700' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E"
-                                                 style="max-width: 100%; display: block; position: static;">
-                                        </div>
-                                        <picture>
-                                            <img sizes="(min-width: 700px) 700px, 100vw" decoding="async"
-                                                 src="./assets/img/banner.png"
-                                                 style="object-fit: cover; opacity: 1;" alt="">
-                                        </picture>
-                                    </div>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="eeeRej">
-                            <div class="project-content">
-                                <div><p class="project-overline">Featured Project</p>
-                                    <h3 class="project-title">
-                                        <a href="#" target="_blank">
-                                            Halcyon Theme
-                                        </a>
-                                    </h3>
-                                    <div class="project-description">
-                                        <p>
-                                        </p>
-                                    </div>
-                                    <ul class="project-tech-list">
-                                        <li>VS Code</li>
-                                        <li>Sublime Text</li>
-                                        <li>Atom</li>
-                                        <li>iTerm2</li>
-                                        <li>Hyper</li>
+                                        <li>Codeigniter 3</li>
+                                        <li>Bootstrap</li>
+                                        <li>React</li>
+                                        <li>Mysql</li>
                                     </ul>
                                 </div>
                             </div>

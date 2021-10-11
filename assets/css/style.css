@@ -835,14 +835,12 @@ section {
     -webkit-box-align: center;
     align-items: center;
 }
-.eeeRej:not(:last-of-type) {
-    margin-bottom: 100px;
-}
 .eeeRej:nth-of-type(2n+1) .project-image {
     grid-column: 1 / 8;
 }
 .eeeRej .project-image {
-    box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
+    box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.5);
+    /*box-shadow: 0 10px 30px -15px rgba(219, 255, 243, 0.7);*/
     transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
     grid-area: 1 / 6 / -1 / -1;
     position: relative;
@@ -874,10 +872,8 @@ section {
     position: relative;
     margin-top: 10px;
     margin-left: -10px;
-    color: #ccdf6f;
 }
 .eeeRej .project-links a {
-
     display: flex;
     -webkit-box-pack: center;
     justify-content: center;
@@ -890,15 +886,25 @@ section {
     grid-area: 1 / 1 / -1 / 7;
 }
 
+.eeeRej .project-overline {
+    margin: 10px 0;
+    font-size: 12px;
+    font-weight: 400;
+}
+.eeeRej .project-title {
+    font-size: 22px;
+}
 .eeeRej .project-description {
-    box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
+    /*box-shadow: 0 10px 30px -15px rgba(27, 27, 27, 0.7);*/
+    box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.5);
     transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
     position: relative;
     z-index: 2;
     padding: 25px;
     border-radius: 4px;
-    background-color: #0b3251;
-    color: #0dcaf0;
+    /*background: rgba(100, 255, 218, 0.2) !important;*/
+    background: rgba(27, 27, 27, 1) !important;
+    color: rgba(255, 255, 255, .5) !important;
     font-size: 13px;
 }
 .eeeRej:nth-of-type(2n+1) .project-content {
@@ -924,6 +930,8 @@ section {
     font-size: 13px;
     white-space: nowrap;
 }
+
+
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
@@ -1292,6 +1300,12 @@ section {
     }
 }
 
+a.link-default{
+    color: #cfcfcf;
+}
+a.link-default:hover {
+    color: #64ffda;
+}
 a.outline-white {
     color: #64ffda;
     text-decoration: none;
