@@ -11,7 +11,6 @@ class Core
 
     function __construct()
     {
-//        require_once __DIR__ . 'DataSource.php';
         require_once 'DataSource.php';
         $this->ds = new DataSource();
     }
@@ -22,9 +21,8 @@ class Core
         return $result ? $result[0] : false;
     }
 
-    public function get_all($table, $array)
+    public function get_all($table)
     {
-        $result = $this->ds->select('SELECT * FROM ' . $table);
-        return $result ? $result[0] : false;
+        return $this->ds->select('SELECT * FROM ' . $table);
     }
 }

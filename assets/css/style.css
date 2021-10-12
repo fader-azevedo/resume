@@ -113,7 +113,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .div-vertical-email a {
     font-size: 12px;
-    color: inherit;
+    color: rgba(255, 255, 255, .5) !important;
     margin: 0 auto;
     padding: 10px;
     letter-spacing: 0.1em;
@@ -744,10 +744,13 @@ section {
 }
 
 .about ul.skills-list li::before {
-    content: "▹";
+    content: "\203A";
+    /*content: "\27A4";*/
+    /*content: "▹";*/
     position: absolute;
     left: 0;
-    color: #64ffda;
+    color: rgba(100, 255, 218, 0.2) !important;
+    /*color: #64ffda;*/
     font-size: 12px;
     line-height: 12px;
 }
@@ -757,6 +760,7 @@ section {
     margin-bottom: 10px;
     padding-left: 20px;
     font-size: 13px;
+    color: rgba(255, 255, 255, .3) !important;
 }
 
 @media (max-width: 1200px) {
@@ -822,7 +826,7 @@ section {
 /*--------------------------------------------------------------
 # Portfolio
  */
-.dnNJYD {
+.project-list {
     list-style: none;
     padding: 0px;
     margin: 0px;
@@ -847,6 +851,10 @@ section {
     grid-area: 1 / 6 / -1 / -1;
     position: relative;
     z-index: 1;
+}
+
+.eeeRej:not(:last-of-type) {
+    margin-bottom: 100px;
 }
 
 
@@ -878,11 +886,6 @@ section {
 .gatsby-image-wrapper:hover img {
     background: rgba(27, 27, 27, 0) !important;
 }
-
-.eeeRej {
-    margin-bottom: 40px !important;
-}
-
 
 .eeeRej .project-links {
     display: flex;
@@ -964,14 +967,33 @@ section {
 --------------------------------------------------------------*/
 .contact .info-box {
     text-align: center;
-    padding: 30px 0 32px 0;
+    padding: 10px 0 12px 0;
     border-radius: 4px;
-    box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.5);
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    /*box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.1);*/
+    /*border-top: 1px solid rgba(255, 255, 255, 0.5);*/
+    /*border-left: 1px solid rgba(255, 255, 255, 0.5);*/
+    background: rgba(27, 27, 27, 1) !important;
 }
 
-.contact .info-box {
+.contact {
+    font-family: Calibri, sans-serif !important;
+}
+
+.contact .form-control {
+    background: transparent;
+    color: #fff;
+}
+
+.contact .form-control:focus {
+    box-shadow: none !important;
+}
+
+.contact button {
+    background: rgba(100, 255, 218, 0.2) !important;
+}
+
+.contact button:hover {
+    color: #fff !important;
 }
 
 .contact .info-box i {
@@ -980,13 +1002,6 @@ section {
     border-radius: 50%;
     padding: 8px;
     border: 2px dotted #f8d4d5;
-}
-
-.contact .info-box h3 {
-    font-size: 20px;
-    color: #777777;
-    font-weight: 700;
-    margin: 10px 0;
 }
 
 .contact .info-box p {
@@ -1151,7 +1166,8 @@ section {
 }
 
 #jobs ul.desc li::before {
-    content: "▹";
+    /*content: "▹";*/
+    content: "\203A";
     position: absolute;
     left: 0;
     color: #64ffda;

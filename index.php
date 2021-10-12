@@ -10,8 +10,10 @@ $lang = isset($_GET['lang']) ? $_GET['lang'] : 'pt';
 $nav = $core_model->get_by_lang('nav', $lang);
 $main = $core_model->get_by_lang('main', $lang);
 $about = $core_model->get_by_lang('about', $lang);
-$job = $core_model->get_by_lang('job', $lang);
-$link = $core_model->get_all('link', null);
+$jobs = $core_model->get_all('job');
+$project = $core_model->get_by_lang('project', $lang);
+$contact = $core_model->get_by_lang('contact', $lang);
+$link = $core_model->get_all('link');
 
 require_once("./view/Language/lang." . $lang . ".php");
 ?>
@@ -22,7 +24,7 @@ require_once("./view/Language/lang." . $lang . ".php");
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Fáder</title>
+    <title><?=$main['name'] ?></title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -118,7 +120,7 @@ require_once("./view/Language/lang." . $lang . ".php");
             <ul>
                 <li><a class="nav-link scrollto " href="#about"><?= $nav['about'] ?></a></li>
                 <li><a class="nav-link scrollto " href="#jobs"><?= $nav['job'] ?></a></li>
-                <li><a class="nav-link scrollto " href="#portfolio"><?= $nav['portfolio'] ?></a></li>
+                <li><a class="nav-link scrollto " href="#projects"><?= $nav['project'] ?></a></li>
                 <li><a class="nav-link scrollto " href="#contact"><?= $nav['contact'] ?></a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
@@ -154,13 +156,13 @@ require_once("./view/Language/lang." . $lang . ".php");
                     <div class="row pt-5">
                         <div class="col-md-8">
                             <p class="text-start text-active h6 mb-3 mb-lg-4"><?= $main['hi'] ?></p>
-                            <p class="text-start text-name">Fáder</p>
+                            <p class="text-start text-name"><?=$main['name'] ?></p>
                             <p class="text-start text-white-50 h3"><?= $main['occupation'] ?></p>
                         </div>
                         <div class="col-md-4 d-flex flex-column justify-content-end">
                             <div class="text-end">
                                 <p>
-                                    <a href="#portfolio" class="outline-white"><?= $nav['portfolio'] ?></a>
+                                    <a href="#project" class="outline-white"><?= $nav['project'] ?></a>
                                 </p>
                                 <p class="text-white-50 h6 mt-5"><?= $main['let_work_together'] ?></p>
                             </div>
@@ -206,10 +208,10 @@ require_once("./view/Language/lang." . $lang . ".php");
     <section id="jobs" class="jobs bg-main">
         <div class="container" data-aos="fade-up">
             <div class="row justify-content-center">
-                <div class="col-lg-8 col-sm-12">
+                <div class="col-lg-9 col-sm-12">
 
                     <div class="section-title">
-                        <h2><?= $job['title'] ?></h2>
+                        <h2><?= $nav['job'] ?></h2>
                     </div>
 
                     <div class="inner">
@@ -227,7 +229,7 @@ require_once("./view/Language/lang." . $lang . ".php");
                             <button class="job-link" id="pills-contact-tab" data-bs-toggle="pill"
                                     data-bs-target="#pills-contact"
                                     type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Classic
-                                Security
+                                Security Systems
                             </button>
                         </div>
 
@@ -269,7 +271,7 @@ require_once("./view/Language/lang." . $lang . ".php");
                                 <span class="text-white">IT Consultant</span>
                                 <label class="text-active">&nbsp;@&nbsp;
                                     <a href="https://www.eiztec.com/" rel="noopener noreferrer" target="_blank">
-                                        Eizy technology, lda
+                                        Eizy technology
                                     </a>
                                 </label>
                                 <p class="range text-white-50">Junho 2019 - Agosto 2020</p>
@@ -339,15 +341,15 @@ require_once("./view/Language/lang." . $lang . ".php");
             </div>
         </div>
     </section>
-    <section id="portfolio" class="portfolio bg-main">
+    <!-- ======= projects Section ======= -->
+    <section id="projects" class="project bg-main">
         <div class="container" data-aos="fade-up">
-
             <div class="section-title">
-                <h2><?= $nav['portfolio'] ?></h2>
+                <h2><?= $nav['project'] ?></h2>
             </div>
-            <div class="row">
+            <div class="row mb-5">
                 <div class="col-12">
-                    <ul class="dnNJYD">
+                    <ul class="project-list">
                         <li class="eeeRej">
                             <div class="project-content">
                                 <div>
@@ -382,7 +384,7 @@ require_once("./view/Language/lang." . $lang . ".php");
                                              style="max-width: 100%; display: block; position: static;">
 
                                         <img sizes="(min-width: 700px) 700px, 100vw" decoding="async"
-                                             src="./assets/img/portfolio/02.jpg" alt="">
+                                             src="./assets/img/projects/02.jpg" alt="">
                                     </div>
                                 </a>
                                 <div class="overlay"></div>
@@ -422,7 +424,7 @@ require_once("./view/Language/lang." . $lang . ".php");
                                              style="max-width: 100%; display: block; position: static;">
 
                                         <img sizes="(min-width: 700px) 700px, 100vw" decoding="async"
-                                             src="./assets/img/portfolio/02.jpg" alt="">
+                                             src="./assets/img/projects/02.jpg" alt="">
                                     </div>
                                 </a>
                                 <div class="overlay"></div>
@@ -462,19 +464,20 @@ require_once("./view/Language/lang." . $lang . ".php");
                                              style="max-width: 100%; display: block; position: static;">
 
                                         <img sizes="(min-width: 700px) 700px, 100vw" decoding="async"
-                                             src="./assets/img/portfolio/02.jpg" alt="">
+                                             src="./assets/img/projects/02.jpg" alt="">
                                     </div>
                                 </a>
-                                <div class="overlay"></div>
                             </div>
                         </li>
                     </ul>
                 </div>
             </div>
+            <br>
+            <p class="text-center">
+                <a href="javascript:void(0)" class="outline-white"><?=$project['more_project']?></a>
+            </p>
         </div>
     </section>
-
-
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact bg-main">
         <div class="container" data-aos="fade-up">
@@ -482,45 +485,68 @@ require_once("./view/Language/lang." . $lang . ".php");
                 <h2><?= $nav['contact'] ?></h2>
             </div>
 
-            <div class="row g-3" data-aos="fade-up" data-aos-delay="100">
-                <div class="col-lg-4">
+            <div class="row g-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-5">
                     <div class="info-box">
                         <div class="row">
                             <div class="col-3">
                                 <i class="bx bx-map"></i>
                             </div>
                             <div class="col-9">
-                                <p class="text-start text-white">Maputo, Moçambique</p>
-                                <p class="text-start text-white-50"><?= $main['contact_address'] ?></p>
+                                <p class="text-start text-white"><?= $contact['address_value'] ?></p>
+                                <p class="text-start text-white-50"><?= $contact['address_label'] ?></p>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="info-box">
+
+                    <div class="info-box my-4">
                         <div class="row">
                             <div class="col-3">
                                 <i class="bx bx-envelope"></i>
                             </div>
                             <div class="col-9">
-                                <p class="text-start text-white">fadermacuvele383@gmail.com</p>
-                                <p class="text-start text-white-50"><?= $main['contact_email'] ?></p>
+                                <p class="text-start text-white"><?= $contact['email_value'] ?></p>
+                                <p class="text-start text-white-50"><?= $contact['email_label'] ?></p>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4">
+
                     <div class="info-box">
                         <div class="row">
                             <div class="col-3">
                                 <i class="bx bx-phone-call"></i>
                             </div>
                             <div class="col-9">
-                                <p class="text-start text-white">+258 84 624 2199</p>
-                                <p class="text-start text-white-50"><?= $main['contact_call'] ?></p>
+                                <p class="text-start text-white"><?= $contact['call_value'] ?></p>
+                                <p class="text-start text-white-50"><?= $contact['call_label'] ?></p>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="col-md-7">
+                    <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="name" class="d-none"></label>
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="<?=$contact['form_name']?>" required="">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="email" class="d-none"></label>
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="<?=$contact['form_email']?>" required="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-12">
+                                <label for="message" class="d-none"></label>
+                                <textarea style="resize: none" class="form-control" id="message" name="message" rows="5" placeholder="<?=$contact['form_message']?>" required=""></textarea>
+                            </div>
+                        </div>
+                        <div class="text-center"><button type="submit" class="outline-white"><i class="bx bx-send me-lg-2"></i><?=$contact['form_send']?></button></div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -532,7 +558,7 @@ require_once("./view/Language/lang." . $lang . ".php");
         <div class="container">
             <div class="row">
                 <div class="col-lg-7 col-md-8 footer-contact">
-                    <h3 class="text-white">Fáder<span>.</span></h3>
+                    <h3 class="text-white"><?=$main['name'] ?><span>.</span></h3>
                     <p class="text-white-50">
                         <?= $main['quote'] ?>
                     </p>
@@ -548,7 +574,7 @@ require_once("./view/Language/lang." . $lang . ".php");
     <div class="container d-md-flex py-4">
         <div class="me-md-auto text-center text-md-start">
             <div class="copyright text-white">
-                &copy; <?= $main['designed_by'] ?> <a href="javascript:void(0)">Fáder</a>
+                <?= $main['designed_by'] ?> <a href="javascript:void(0)"><?=$main['name'] ?></a>
             </div>
         </div>
         <div class="social-links text-center text-md-end pt-3 pt-md-0">
@@ -563,7 +589,7 @@ require_once("./view/Language/lang." . $lang . ".php");
         </div>
     </div>
 </footer>
-
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center active"><i class="bi bi-arrow-up-short"></i></a>
 <!-- Vendor JS Files -->
 <script src="assets/vendor/aos/aos.js"></script>
 <script src="assets/js/jquery.min.js"></script>
