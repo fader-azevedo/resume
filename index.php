@@ -138,7 +138,7 @@ require_once("./view/Language/lang." . $lang . ".php");
     <div class="opa">
         <div class="dot">
             <div class="main-container w-100 h-100">
-                <div class="container pt-lg-5 h-100 mt-lg-5 d-flex flex-column justify-content-between">
+                <div class="container h-100 d-flex flex-column justify-content-between">
 
                     <div class="">
                         <p class="text-start text-active h6 mb-3 mb-lg-4"><?= $main['hi'] ?></p>
