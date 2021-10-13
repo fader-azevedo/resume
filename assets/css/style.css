@@ -479,10 +479,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero h1 {
-    margin: 0;
-    font-size: 48px;
+    /*font-size: 48px;*/
     font-weight: 700;
-    color: #fff;
+    /*color: #fff;*/
+
+
+    font-size: 100px;
+    line-height: 70px;
+    margin-left: -10px;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    /*background: url("../img/back.png");*/
+    -webkit-background-clip: text;
+    /*background-position: -8px -40px;*/
+    animation: back 20s linear infinite;
+    font-family: "SF Mono Bold", sans-serif;
 }
 
 #hero h2 {
@@ -543,6 +554,66 @@ h1, h2, h3, h4, h5, h6 {
     #hero {
         height: 120vh;
     }
+}
+
+.text-name {
+    font-size: 100px;
+    line-height: 70px;
+    margin-left: -10px;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url("../img/back.png");
+    -webkit-background-clip: text;
+    background-position: -8px -40px;
+    animation: back 20s linear infinite;
+    font-family: "SF Mono Bold", sans-serif;
+}
+
+
+@keyframes back {
+    100% {
+        background-position: 2000px 0;
+    }
+}
+
+/*sm*/
+@media (min-width: 576px) {
+    .text-name {
+        font-size: 120px;
+        line-height: 100px;
+    }
+}
+
+/*md*/
+@media (min-width: 768px) {
+    .text-name {
+        font-size: 120px;
+        line-height: 100px;
+    }
+}
+
+/*lg*/
+@media (min-width: 992px) {
+    .text-name {
+        font-size: 120px;
+        line-height: 100px;
+    }
+}
+
+
+.fancy {
+
+}
+
+
+#hero span{
+    opacity: 0;
+    transition: all 0.4s ease;
+
+}
+
+#hero span.fade{
+    opacity: 1;
 }
 
 /*--------------------------------------------------------------
@@ -1286,6 +1357,7 @@ section {
     position: absolute;
     z-index: 21;
     padding-bottom: 125px;
+    padding-top: 200px !important;
 }
 
 .opa {
@@ -1298,49 +1370,6 @@ section {
 
 .text-active {
     color: #64ffda;
-}
-
-.text-name {
-    font-size: 100px;
-    line-height: 70px;
-    margin-left: -10px;
-    color: transparent;
-    -webkit-text-stroke: 1px #fff;
-    background: url("../img/back.png");
-    -webkit-background-clip: text;
-    background-position: -8px -40px;
-    animation: back 20s linear infinite;
-    font-family: "SF Mono Bold", sans-serif;
-}
-
-@keyframes back {
-    100% {
-        /*background-position: 2000px 0;*/
-    }
-}
-
-/*sm*/
-@media (min-width: 576px) {
-    .text-name {
-        font-size: 120px;
-        line-height: 100px;
-    }
-}
-
-/*md*/
-@media (min-width: 768px) {
-    .text-name {
-        font-size: 120px;
-        line-height: 100px;
-    }
-}
-
-/*lg*/
-@media (min-width: 992px) {
-    .text-name {
-        font-size: 120px;
-        line-height: 100px;
-    }
 }
 
 a.link-default {

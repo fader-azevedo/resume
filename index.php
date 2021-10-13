@@ -24,7 +24,7 @@ require_once("./view/Language/lang." . $lang . ".php");
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title><?=$main['name'] ?></title>
+    <title><?= $main['name'] ?></title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -137,32 +137,40 @@ require_once("./view/Language/lang." . $lang . ".php");
 <section id="hero" class="banner-home pt-0">
     <div class="opa">
         <div class="dot">
-            <div class="main-container w-100 h-100 pt-5 pt-lg-5 bg-dangers">
-                <div class="container h-100 mt-5 d-flex flex-column justify-content-between">
-                    <div class="row d-flex justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-start"
-                         data-aos="zoom-in" data-aos-delay="100">
-                        <!--                        <div class="col-xl-4 col-lg-5 col-md-5 col-sm-4">-->
-                        <div class="col-xl-4 col-lg-5 col-md-5 col-sm-4 col-12">
-                            <!--                            <div class="bg-transparent rounded-circle row mx-sm-auto mx-auto mx-lg-0 align-items-center"-->
-                            <!--                                 style="width: 230px; height: 230px; border: 2px solid white">-->
-                            <!--                                <img src="assets/img/fader-face.jpg" class="rounded-circle mx-autox d-blockx" alt="">-->
-                            <!--                            </div>-->
+            <div class="main-container w-100 h-100">
+                <div class="container pt-lg-5 h-100 mt-lg-5 d-flex flex-column justify-content-between">
 
-                            <div class="rounded position-relative image-box mt-5 mx-auto d-block mx-lg-0">
-                                <img src="assets/img/fader-face.jpg" class="rounded position-absolute w-100" alt="">
+                    <div class="">
+                        <p class="text-start text-active h6 mb-3 mb-lg-4"><?= $main['hi'] ?></p>
+
+                        <h1 class="fancy">
+                            <?= $main['name'] ?>
+                        </h1>
+                        <div class="row pt-lg-5" data-aos="fade-down" data-aos-delay="250">
+                            <div class="col-lg-5">
+                                I’m a software engineer specializing in building (and occasionally designing) exceptional
+                                digital experiences. Currently, I’m focused on building accessible, human-centered products at
+                                Upstatement.
                             </div>
                         </div>
                     </div>
+
                     <div class="row pt-5">
                         <div class="col-md-8">
-                            <p class="text-start text-active h6 mb-3 mb-lg-4"><?= $main['hi'] ?></p>
-                            <p class="text-start text-name"><?=$main['name'] ?></p>
-                            <p class="text-start text-white-50 h3"><?= $main['occupation'] ?></p>
+                            <!--                            <p class="text-start text-active h6 mb-3 mb-lg-4">-->
+                            <? //= $main['hi']
+                            ?><!--</p>-->
+                            <!--                            <p class="text-start text-name fancy">--><? //= $main['name']
+                            ?>
+                            <!--                            </p>-->
+                            <!--                            <p class="text-start text-white-50 h3">-->
+                            <? //= $main['occupation']
+                            ?><!--</p>-->
                         </div>
                         <div class="col-md-4 d-flex flex-column justify-content-end">
                             <div class="text-end">
                                 <p>
-                                    <a href="#project" class="outline-white"><?= $nav['project'] ?></a>
+                                    <a href="#projects" class="outline-white"><?= $nav['project'] ?></a>
                                 </p>
                                 <p class="text-white-50 h6 mt-5"><?= $main['let_work_together'] ?></p>
                             </div>
@@ -361,10 +369,12 @@ require_once("./view/Language/lang." . $lang . ".php");
                                     </h3>
                                     <div class="project-description">
                                         <p>
-                                            BigB Soft foi desenvolvido com o objetivo facilitar todo o processo de vendas e facturação
+                                            BigB Soft foi desenvolvido com o objetivo facilitar todo o processo de
+                                            vendas e facturação
                                         </p>
                                         <p class="text-end pt-lg-3 mb-lg-1">
-                                            <a href="https://bigbsoft.com/" target="_blank" class="outline-white sm" title="BigB Soft">Visitar</a>
+                                            <a href="https://bigbsoft.com/" target="_blank" class="outline-white sm"
+                                               title="BigB Soft">Visitar</a>
                                             <a href="javascript:void(0)" class="outline-white sm">Imagens</a>
                                         </p>
                                     </div>
@@ -401,10 +411,12 @@ require_once("./view/Language/lang." . $lang . ".php");
                                     </h3>
                                     <div class="project-description">
                                         <p>
-                                            BigB Soft foi desenvolvido com o objetivo facilitar todo o processo de vendas e facturação
+                                            BigB Soft foi desenvolvido com o objetivo facilitar todo o processo de
+                                            vendas e facturação
                                         </p>
                                         <p class="text-end pt-lg-3 mb-lg-1">
-                                            <a href="https://bigbsoft.com/" target="_blank" class="outline-white sm" title="BigB Soft">Visitar</a>
+                                            <a href="https://bigbsoft.com/" target="_blank" class="outline-white sm"
+                                               title="BigB Soft">Visitar</a>
                                             <a href="javascript:void(0)" class="outline-white sm">Imagens</a>
                                         </p>
                                     </div>
@@ -441,10 +453,12 @@ require_once("./view/Language/lang." . $lang . ".php");
                                     </h3>
                                     <div class="project-description">
                                         <p>
-                                            BigB Soft foi desenvolvido com o objetivo facilitar todo o processo de vendas e facturação
+                                            BigB Soft foi desenvolvido com o objetivo facilitar todo o processo de
+                                            vendas e facturação
                                         </p>
                                         <p class="text-end pt-lg-3 mb-lg-1">
-                                            <a href="https://bigbsoft.com/" target="_blank" class="outline-white sm" title="BigB Soft">Visitar</a>
+                                            <a href="https://bigbsoft.com/" target="_blank" class="outline-white sm"
+                                               title="BigB Soft">Visitar</a>
                                             <a href="javascript:void(0)" class="outline-white sm">Imagens</a>
                                         </p>
                                     </div>
@@ -474,7 +488,7 @@ require_once("./view/Language/lang." . $lang . ".php");
             </div>
             <br>
             <p class="text-center">
-                <a href="javascript:void(0)" class="outline-white"><?=$project['more_project']?></a>
+                <a href="javascript:void(0)" class="outline-white"><?= $project['more_project'] ?></a>
             </p>
         </div>
     </section>
@@ -529,23 +543,29 @@ require_once("./view/Language/lang." . $lang . ".php");
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="name" class="d-none"></label>
-                                    <input type="text" name="name" class="form-control" id="name" placeholder="<?=$contact['form_name']?>" required="">
+                                    <input type="text" name="name" class="form-control" id="name"
+                                           placeholder="<?= $contact['form_name'] ?>" required="">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="email" class="d-none"></label>
-                                    <input type="email" class="form-control" name="email" id="email" placeholder="<?=$contact['form_email']?>" required="">
+                                    <input type="email" class="form-control" name="email" id="email"
+                                           placeholder="<?= $contact['form_email'] ?>" required="">
                                 </div>
                             </div>
                         </div>
                         <div class="row mb-4">
                             <div class="col-12">
                                 <label for="message" class="d-none"></label>
-                                <textarea style="resize: none" class="form-control" id="message" name="message" rows="5" placeholder="<?=$contact['form_message']?>" required=""></textarea>
+                                <textarea style="resize: none" class="form-control" id="message" name="message" rows="5"
+                                          placeholder="<?= $contact['form_message'] ?>" required=""></textarea>
                             </div>
                         </div>
-                        <div class="text-center"><button type="submit" class="outline-white"><i class="bx bx-send me-lg-2"></i><?=$contact['form_send']?></button></div>
+                        <div class="text-center">
+                            <button type="submit" class="outline-white"><i
+                                        class="bx bx-send me-lg-2"></i><?= $contact['form_send'] ?></button>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -558,7 +578,7 @@ require_once("./view/Language/lang." . $lang . ".php");
         <div class="container">
             <div class="row">
                 <div class="col-lg-7 col-md-8 footer-contact">
-                    <h3 class="text-white"><?=$main['name'] ?><span>.</span></h3>
+                    <h3 class="text-white"><?= $main['name'] ?><span>.</span></h3>
                     <p class="text-white-50">
                         <?= $main['quote'] ?>
                     </p>
@@ -574,7 +594,7 @@ require_once("./view/Language/lang." . $lang . ".php");
     <div class="container d-md-flex py-4">
         <div class="me-md-auto text-center text-md-start">
             <div class="copyright text-white">
-                <?= $main['designed_by'] ?> <a href="javascript:void(0)"><?=$main['name'] ?></a>
+                <?= $main['designed_by'] ?> <a href="javascript:void(0)"><?= $main['name'] ?></a>
             </div>
         </div>
         <div class="social-links text-center text-md-end pt-3 pt-md-0">
@@ -589,7 +609,9 @@ require_once("./view/Language/lang." . $lang . ".php");
         </div>
     </div>
 </footer>
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center active"><i class="bi bi-arrow-up-short"></i></a>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center active">
+    <i class="bi bi-arrow-up-short"></i>
+</a>
 <!-- Vendor JS Files -->
 <script src="assets/vendor/aos/aos.js"></script>
 <script src="assets/js/jquery.min.js"></script>
@@ -604,6 +626,40 @@ require_once("./view/Language/lang." . $lang . ".php");
         max: 25,
         speed: 400
     });
+
+    function fancy(text) {
+        const str = text.textContent;
+        const splitText = str.split("");
+        text.textContent = "";
+        for (let i = 0; i < splitText.length; i++) {
+            text.innerHTML += "<span>" + splitText[i] + "</span>";
+        }
+
+        let char = 0;
+        let timer = setInterval(onTick, 50)
+
+        function onTick() {
+            const span = text.querySelectorAll('span')[char];
+            span.classList.add('fade')
+            char++;
+            if (char === splitText.length) {
+                complete();
+                return;
+            }
+        }
+
+        function complete() {
+            clearInterval(timer);
+            timer = null;
+        }
+    }
+
+    const text = document.querySelector('.fancy');
+    fancy(text)
+    $(document).ready(function () {
+
+
+    })
 </script>
 </body>
 
