@@ -479,19 +479,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero h1 {
-    /*font-size: 48px;*/
     font-weight: 700;
-    /*color: #fff;*/
-
-
     font-size: 100px;
     line-height: 70px;
     margin-left: -10px;
     color: transparent;
     -webkit-text-stroke: 1px #fff;
-    /*background: url("../img/back.png");*/
     -webkit-background-clip: text;
-    /*background-position: -8px -40px;*/
     animation: back 20s linear infinite;
     font-family: "SF Mono Bold", sans-serif;
 }
@@ -534,27 +528,42 @@ h1, h2, h3, h4, h5, h6 {
     right: -8%
 }
 
-@media (max-width: 768px) {
-    #hero {
-        text-align: center;
-        padding-top: 58px;
-    }
 
-    #hero h1 {
-        font-size: 28px;
-    }
+#hero span{
+    opacity: 0;
+    transition: all 0.4s ease;
 
-    #hero h2 {
-        font-size: 18px;
-        line-height: 24px;
-    }
 }
 
-@media (max-height: 500px) {
-    #hero {
-        height: 120vh;
-    }
+#hero span.fade{
+    opacity: 1;
 }
+
+.dot {
+    background: url("../img/dot.png");
+}
+
+.banner-effect {
+    position: relative;
+    background: linear-gradient(to right, #0071bc, #0071bc55, #952a7c55, #952a7c);
+    box-shadow: 0 5px 5px grey;
+    margin-bottom: 30px !important;
+}
+
+.banner-home .dot {
+    height: 100vh;
+}
+
+.banner-home .main-container {
+    position: absolute;
+    z-index: 1;
+    padding-top: 200px;
+}
+
+.opa {
+    background: rgba(27, 27, 27, 0.9) !important;
+}
+
 
 .text-name {
     font-size: 100px;
@@ -569,10 +578,40 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "SF Mono Bold", sans-serif;
 }
 
-
 @keyframes back {
     100% {
         background-position: 2000px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    #hero h1 {
+        margin-left: 0;
+    }
+
+    #hero {
+        text-align: center;
+        padding-top: 58px;
+    }
+
+    #hero h1 {
+        font-size: 34px;
+    }
+
+    #hero h2 {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .banner-home .main-container {
+        padding-top: 160px;
+    }
+
+}
+
+@media (max-height: 500px) {
+    #hero {
+        height: 120vh;
     }
 }
 
@@ -601,20 +640,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-.fancy {
-
-}
-
-
-#hero span{
-    opacity: 0;
-    transition: all 0.4s ease;
-
-}
-
-#hero span.fade{
-    opacity: 1;
-}
 
 /*--------------------------------------------------------------
 # Sections General
@@ -1335,33 +1360,6 @@ section {
 
 .text-justify {
     text-align: justify !important;
-}
-
-
-.dot {
-    background: url("../img/dot.png");
-}
-
-.banner-effect {
-    position: relative;
-    background: linear-gradient(to right, #0071bc, #0071bc55, #952a7c55, #952a7c);
-    box-shadow: 0 5px 5px grey;
-    margin-bottom: 30px !important;
-}
-
-.banner-home .dot {
-    height: 100vh;
-}
-
-.banner-home .main-container {
-    position: absolute;
-    z-index: 21;
-    padding-bottom: 125px;
-    padding-top: 200px !important;
-}
-
-.opa {
-    background: rgba(27, 27, 27, 0.9) !important;
 }
 
 .bg-site {

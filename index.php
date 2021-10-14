@@ -24,7 +24,7 @@ require_once("./view/Language/lang." . $lang . ".php");
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title><?= $main['name'] ?></title>
+    <title><?= $main['first_name'] ?></title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -138,36 +138,24 @@ require_once("./view/Language/lang." . $lang . ".php");
     <div class="opa">
         <div class="dot">
             <div class="main-container w-100 h-100">
-                <div class="container h-100 d-flex flex-column justify-content-between">
-
-                    <div class="">
+                <div class="container h-100 d-flex flex-column justify-content-between  pb-lg-5">
+                    <div style="border-left: #64ffda solid 5px" class="ps-3">
                         <p class="text-start text-active h6 mb-3 mb-lg-4"><?= $main['hi'] ?></p>
 
-                        <h1 class="fancy">
-                            <?= $main['name'] ?>
+                        <h1 class="fancy text-start">
+                            <?= $main['first_name'] . ' ' . $main['last_name'] ?>
                         </h1>
                         <div class="row pt-lg-5" data-aos="fade-down" data-aos-delay="250">
-                            <div class="col-lg-5">
-                                I’m a software engineer specializing in building (and occasionally designing) exceptional
-                                digital experiences. Currently, I’m focused on building accessible, human-centered products at
-                                Upstatement.
+                            <div class="col-lg-6 text-white-50 text-start">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                             </div>
                         </div>
                     </div>
 
-                    <div class="row pt-5">
-                        <div class="col-md-8">
-                            <!--                            <p class="text-start text-active h6 mb-3 mb-lg-4">-->
-                            <? //= $main['hi']
-                            ?><!--</p>-->
-                            <!--                            <p class="text-start text-name fancy">--><? //= $main['name']
-                            ?>
-                            <!--                            </p>-->
-                            <!--                            <p class="text-start text-white-50 h3">-->
-                            <? //= $main['occupation']
-                            ?><!--</p>-->
-                        </div>
-                        <div class="col-md-4 d-flex flex-column justify-content-end">
+                    <div class="row d-flex justify-content-end">
+                        <div class="col-md-4 float-end">
                             <div class="text-end">
                                 <p>
                                     <a href="#projects" class="outline-white"><?= $nav['project'] ?></a>
@@ -180,8 +168,7 @@ require_once("./view/Language/lang." . $lang . ".php");
             </div>
         </div>
     </div>
-
-</section><!-- End Hero -->
+</section>
 
 <main id="main">
     <section id="about" class="about bg-main">
@@ -548,7 +535,7 @@ require_once("./view/Language/lang." . $lang . ".php");
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="form-group">
+                                <div class="mb-3">
                                     <label for="email" class="d-none"></label>
                                     <input type="email" class="form-control" name="email" id="email"
                                            placeholder="<?= $contact['form_email'] ?>" required="">
@@ -578,7 +565,7 @@ require_once("./view/Language/lang." . $lang . ".php");
         <div class="container">
             <div class="row">
                 <div class="col-lg-7 col-md-8 footer-contact">
-                    <h3 class="text-white"><?= $main['name'] ?><span>.</span></h3>
+                    <h3 class="text-white"><?= $main['first_name'] ?><span>.</span></h3>
                     <p class="text-white-50">
                         <?= $main['quote'] ?>
                     </p>
@@ -594,7 +581,7 @@ require_once("./view/Language/lang." . $lang . ".php");
     <div class="container d-md-flex py-4">
         <div class="me-md-auto text-center text-md-start">
             <div class="copyright text-white">
-                <?= $main['designed_by'] ?> <a href="javascript:void(0)"><?= $main['name'] ?></a>
+                <?= $main['designed_by'] ?> <a href="javascript:void(0)"><?= $main['first_name'] ?></a>
             </div>
         </div>
         <div class="social-links text-center text-md-end pt-3 pt-md-0">
@@ -636,7 +623,7 @@ require_once("./view/Language/lang." . $lang . ".php");
         }
 
         let char = 0;
-        let timer = setInterval(onTick, 50)
+        let timer = setInterval(onTick, 50);
 
         function onTick() {
             const span = text.querySelectorAll('span')[char];
@@ -655,7 +642,7 @@ require_once("./view/Language/lang." . $lang . ".php");
     }
 
     const text = document.querySelector('.fancy');
-    fancy(text)
+    fancy(text);
     $(document).ready(function () {
 
 

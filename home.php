@@ -16,41 +16,46 @@
 </head>
 <body class="mod-bg-1 mod-nav-link mod-skin-dark nav-function-fixed">
 
-<?php include 'view/template/script_loader.php'?>
+<?php include 'view/template/script_loader.php' ?>
 <div class="page-wrapper">
     <div class="page-inner">
-        <?php include 'view/template/aside.php'?>
+        <?php include 'view/template/aside.php' ?>
         <div class="page-content-wrapper">
-            <?php include 'view/template/header.php'?>
+            <?php include 'view/template/header.php' ?>
             <main id="js-page-content" role="main" class="page-content">
-                <?php include 'view/about.php'?>
+                <?php include 'view/about.php' ?>
             </main>
             <div class="page-content-overlay" data-action="toggle" data-class="mobile-nav-on"></div>
         </div>
     </div>
 </div>
 
-<?php include 'view/template/settings.php'?>
+<?php include 'view/template/settings.php' ?>
 
 <script src="./assets/js/vendors.bundle.js"></script>
 <script src="./assets/js/app.bundle.js"></script>
 <script>
-    const base_url = '';
     $(document).ready(function () {
 
+        $('.link-main').on('click', function () {
+            const target = $(this).data('target');
+            get_view(target);
+        });
     });
 
     function get_view(file) {
         $.ajax({
-            url: base_url+'/',
+            url: 'model/controller.php',
             type: 'POST',
-            data: {view: file},
+            data: {
+                action: 'render',
+                view: file,
+            },
             beforeSend: function () {
-                console.log('before');
+                console.log('');
             },
             success: function (data) {
-                console.log('success');
-                $('#js-page-content')
+                $('#js-page-content').html(data)
             },
             error: function () {
                 console.log('error');

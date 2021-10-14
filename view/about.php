@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-lg-6 col-xl-3 order-lg-1 order-xl-1">
+    <div class="col-lg-6 col-xl-6 order-lg-1 order-xl-1">
         <!-- profile summary -->
         <div class="card mb-g rounded-top">
             <div class="row no-gutters row-grid">
@@ -41,27 +41,27 @@
                         </h2>
                     </div>
                 </div>
-                <div class="col-4">
-                    <a href="javascript:void(0);"
-                       class="text-center px-3 py-4 d-flex position-relative height-10 border">
-                                        <span class="position-absolute pos-top pos-left pos-right pos-bottom"
-                                              style="background-image: url('img/demo/gallery/thumb/1.jpg');background-size: cover;"></span>
-                    </a>
-                </div>
-                <div class="col-4">
-                    <a href="javascript:void(0);"
-                       class="text-center px-3 py-4 d-flex position-relative height-10 border">
-                                        <span class="position-absolute pos-top pos-left pos-right pos-bottom"
-                                              style="background-image: url('img/demo/gallery/thumb/2.jpg');background-size: cover;"></span>
-                    </a>
-                </div>
-                <div class="col-4">
-                    <a href="javascript:void(0);"
-                       class="text-center px-3 py-4 d-flex position-relative height-10 border">
-                                        <span class="position-absolute pos-top pos-left pos-right pos-bottom"
-                                              style="background-image: url('img/demo/gallery/thumb/2.jpg');background-size: cover;"></span>
-                    </a>
-                </div>
+<!--                <div class="col-4">-->
+<!--                    <a href="javascript:void(0);"-->
+<!--                       class="text-center px-3 py-4 d-flex position-relative height-10 border">-->
+<!--                                        <span class="position-absolute pos-top pos-left pos-right pos-bottom"-->
+<!--                                              style="background-image: url('img/demo/gallery/thumb/1.jpg');background-size: cover;"></span>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                <div class="col-4">-->
+<!--                    <a href="javascript:void(0);"-->
+<!--                       class="text-center px-3 py-4 d-flex position-relative height-10 border">-->
+<!--                                        <span class="position-absolute pos-top pos-left pos-right pos-bottom"-->
+<!--                                              style="background-image: url('img/demo/gallery/thumb/2.jpg');background-size: cover;"></span>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                <div class="col-4">-->
+<!--                    <a href="javascript:void(0);"-->
+<!--                       class="text-center px-3 py-4 d-flex position-relative height-10 border">-->
+<!--                                        <span class="position-absolute pos-top pos-left pos-right pos-bottom"-->
+<!--                                              style="background-image: url('img/demo/gallery/thumb/2.jpg');background-size: cover;"></span>-->
+<!--                    </a>-->
+<!--                </div>-->
                 <div class="col-12">
                     <div class="p-3 text-center">
                         <a href="javascript:void(0);" class="btn-link font-weight-bold">View all</a>
@@ -70,7 +70,7 @@
             </div>
         </div>
     </div>
-    <div class="col-lg-6 col-xl-3 order-lg-2 order-xl-3">
+    <div class="col-lg-6 col-xl-6 order-lg-2 order-xl-3">
         <!-- add : -->
         <div class="card mb-2">
             <div class="card-body">

@@ -11,32 +11,32 @@
             </div>
         </div>
         <ul id="js-nav-menu" class="nav-menu">
-            <li id="li-resume">
-                <a href="#" title="Resume">
+            <li id="li-about">
+                <a href="#" title="Resume" class="link-main" data-target="about">
                     <i class="fal fa-user"></i>
                     <span class="nav-link-text">Resume</span>
                 </a>
             </li>
-            <li id="li-experience">
-                <a href="#" title="Experience">
+            <li id="li-job">
+                <a href="#" title="Experience" class="link-main" data-target="job">
                     <i class="fal fa-briefcase"></i>
                     <span class="nav-link-text">Experience</span>
                 </a>
             </li>
-            <li id="li-job">
-                <a href="#" title="Projects">
+            <li id="li-project">
+                <a href="#" title="Projects" class="link-main" data-target="project">
                     <i class="fal fa-layer-group"></i>
                     <span class="nav-link-text">Projects</span>
                 </a>
             </li>
             <li id="li-contact">
-                <a href="#" title="Contact">
+                <a href="#" title="Contact" class="link-main" data-target="contact">
                     <i class="fal fa-phone"></i>
                     <span class="nav-link-text">Contact</span>
                 </a>
             </li>
             <li id="li-mail">
-                <a href="#" title="Mail">
+                <a href="#" title="Mail" class="link-main" data-target="mail">
                     <i class="fal fa-envelope"></i>
                     <span class="nav-link-text">Mail box</span>
                 </a>

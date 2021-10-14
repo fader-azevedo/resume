@@ -83,11 +83,12 @@
                                     <a href="#" class="d-flex align-items-center">
                                                             <span class="status mr-2">
                                                                 <span class="profile-image rounded-circle d-inline-block"
-                                                                      style="background-image:url('img/demo/avatars/avatar-c.png')"></span>
+                                                                      style="background-image:url('assets/img/fader-face.jpg')">
+                                                                </span>
                                                             </span>
                                         <span class="d-flex flex-column flex-1 ml-1">
                                                                 <span class="name">Melissa Ayre <span
-                                                                        class="badge badge-primary fw-n position-absolute pos-top pos-right mt-1">INBOX</span></span>
+                                                                            class="badge badge-primary fw-n position-absolute pos-top pos-right mt-1">INBOX</span></span>
                                                                 <span class="msg-a fs-sm">Re: New security codes</span>
                                                                 <span class="msg-b fs-xs">Hello again and thanks for being part...</span>
                                                                 <span class="fs-nano text-muted mt-1">56 seconds ago</span>
