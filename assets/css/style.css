@@ -529,13 +529,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-#hero span{
+#hero span {
     opacity: 0;
     transition: all 0.4s ease;
 
 }
 
-#hero span.fade{
+#hero span.fade {
     opacity: 1;
 }
 
@@ -638,7 +638,6 @@ h1, h2, h3, h4, h5, h6 {
         line-height: 100px;
     }
 }
-
 
 
 /*--------------------------------------------------------------
@@ -839,6 +838,13 @@ section {
     list-style: none;
 }
 
+@media (max-width: 768px) {
+    .about ul.skills-list {
+        grid-template-columns: repeat(2, minmax(140px, 200px));
+    }
+
+}
+
 .about ul.skills-list li::before {
     content: "\203A";
     /*content: "\27A4";*/
@@ -857,6 +863,7 @@ section {
     padding-left: 20px;
     font-size: 13px;
     color: rgba(255, 255, 255, .3) !important;
+    text-align: left;
 }
 
 @media (max-width: 1200px) {
