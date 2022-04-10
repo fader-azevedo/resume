@@ -269,7 +269,7 @@ require_once("./view/Language/lang." . $lang . ".php");
                                         Eizy technology
                                     </a>
                                 </label>
-                                <p class="range text-white-50">Junho 2019 - Agosto 2020</p>
+                                <p class="range text-white-50">Fevereiro 2019 - Julho 2020</p>
                                 <div class="text-white-50">
                                     <ul class="desc">
                                         <li>
